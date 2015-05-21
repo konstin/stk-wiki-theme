@@ -1,0 +1,58 @@
+/* http: //css-tricks.com/targetting-menu-elements-submenus-navigation-bar/ */
+nav {
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 200px;
+}
+
+.nav a {
+    color: white;
+    position: relative;
+    margin: 0px 10px;
+}
+
+.nav li:before {
+    content: '|';
+    color: white;
+}
+
+.nav li:first-child:before {
+   content: '';
+}
+
+.nav a:hover {
+    text-decoration: none;
+}
+
+.nav {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav > li {
+    float: left;
+    margin: 10px 0;
+}
+
+.nav li:hover > a {
+    color: orange;
+}
+
+.nav li a:first-child:nth-last-child(2):before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 50% ;
+}

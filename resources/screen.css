@@ -1,0 +1,21 @@
+a, a:hover {
+    text-decoration: none;
+}
+
+.logo {
+
+}
+
+.outerbox {
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+.login {
+    float: right;
+    font-size: 12px;
+}
+
+.login a {
+    color: #3EA615;
+}
