@@ -11,11 +11,26 @@ class SuperTuxKartTemplate extends BaseTemplate {
      * Outputs the entire contents of the page
      */
     public function execute() {
-        $this->html( 'headelement' ); ?>
+$this->html( 'headelement' ); ?>
 
 <div class="outerbox">
 
+
+<div class="header_wrapper">
 <div class="login"><a href="#">Login | Register</a></div>
+
+<nav>
+<div class="nav-color-wrapper">
+    <ul class="nav">
+        <li><a href="#">Discover</a></li>
+        <li><a href="#">Download</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+    </ul>
+</div>
+</nav>
 
 <a class="logo"
     href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
@@ -26,17 +41,10 @@ class SuperTuxKartTemplate extends BaseTemplate {
         alt="<?php $this->text( 'sitename' ) ?>"
     />
 </a>
+</div>
 
-<nav>
-    <ul class="nav">
-        <li><a href="#">Discover</a></li>
-        <li><a href="#">Download</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-    </ul>
-</nav>
+
+<div class="main-content-wrapper">
 
 <div class="custom-dropdown-container">
     <a href="#" class="custom-dropdown-trigger">Tools</a>
@@ -80,6 +88,8 @@ class SuperTuxKartTemplate extends BaseTemplate {
 </div>
 
 <?php $this->printTrail(); ?>
+
+</div> <!-- main-content-wrapper -->
 
 </body>
 </html><?php

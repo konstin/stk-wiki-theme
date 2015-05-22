@@ -1,21 +1,51 @@
-a, a:hover {
-    text-decoration: none;
-}
-
-.logo {
-
-}
-
-.outerbox {
-    max-width: 800px;
-    margin: 0px auto;
-}
-
+/** header **/
 .login {
     float: right;
     font-size: 12px;
+    margin-top: 3px;
+    margin-right: 8px;
 }
 
 .login a {
     color: #3EA615;
 }
+
+.header_wrapper {
+    background-image: url('../images/header.jpg');
+    height: 170px;
+    position: relative;
+}
+
+.header_wrapper > a {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.header_wrapper > nav {
+    position: absolute;
+    bottom: 0px;
+}
+
+/** other_stuff **/
+
+body {
+    background-image: url(../images/background.jpg);
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+.outerbox {
+    max-width: 800px;
+    margin: 0px auto;
+    background-color: #ddd;
+    padding: 5px;
+}
+
+.main-content-wrapper {
+    padding: 10px;
+}
+
+
