@@ -33,13 +33,14 @@ class SuperTuxKartTemplate extends BaseTemplate {
         <li><a href="#">Download</a></li>
         <li><a href="#">FAQ</a></li>
         <li><a href="#">Community</a></li>
+        <li><a href="#">About</a></li>
         <li><a href="#">Blog</a></li>
     </ul>
 </nav>
 
-
-<div id="jq-dropdown-1" class="jq-dropdown jq-dropdown-tip">
-    <div class="jq-dropdown-menu">
+<div class="custom-dropdown-container">
+    <a href="#" class="custom-dropdown-trigger">Tools</a>
+    <div class="custom-dropdown">
         <h5>General</h5>
         <ul>
         <?php
@@ -67,24 +68,18 @@ class SuperTuxKartTemplate extends BaseTemplate {
                 echo $box['content'];
             }
         } ?>
+        </div>
+        </div>
     </div>
 </div>
-
-
-<div id="jq-dropdown-1" class="jq-dropdown jq-dropdown-tip">
-    <div class="jq-dropdown-panel">
-        You can put whatever HTML you want in a panel!
-    </div>
-</div>
-
 
 <h1 id="firstHeading" class="firstHeading"><?php $this->html( 'title' ) ?></h1>
 
 <?php $this->html( 'bodytext' ) ?>
 
-<?php $this->printTrail(); ?>
-
 </div>
+
+<?php $this->printTrail(); ?>
 
 </body>
 </html><?php

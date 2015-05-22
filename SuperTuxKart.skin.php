@@ -30,7 +30,7 @@ class SkinSuperTuxKart extends SkinTemplate {
     function setupSkinUserCss( OutputPage $out ) {
         parent::setupSkinUserCss( $out );
         $out->addModuleStyles( array(
-           'skins.supertuxkart' //  'mediawiki.skinning.interface' <- default styles
+           'skins.supertuxkart', 'skins.supertuxkart.js', //  'mediawiki.skinning.interface' <- default styles
         ) );
     }
 }
