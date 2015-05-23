@@ -1,4 +1,13 @@
-/** header **/
+/** general stuff ------------------------------------------------------------------------------ **/
+body {
+    background-image: url(../skins/supertuxkart/images/background.jpg);
+    font-family: sans;
+    font-size: 18px;
+    background-attachment: fixed;
+    margin: 0px;
+}
+
+/** header ------------------------------------------------------------------------------------- **/
 .login {
     float: right;
     font-size: 12px;
@@ -11,8 +20,8 @@
 }
 
 .header_wrapper {
-    background-image: url('../images/header.jpg');
-    height: 170px;
+    background-image: url('../skins/supertuxkart/images/header.jpg');
+    height: 130px;
     position: relative;
 }
 
@@ -27,21 +36,19 @@
     bottom: 0px;
 }
 
-/** other_stuff **/
-
-body {
-    background-image: url(../images/background.jpg);
-}
+/** other stuff -------------------------------------------------------------------------------- **/
 
 a, a:hover {
     text-decoration: none;
 }
 
 .outerbox {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0px auto;
     background-color: #ddd;
-    padding: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    /*padding: 5px;*/
 }
 
 .main-content-wrapper {
