@@ -23,11 +23,11 @@ $this->html( 'headelement' ); ?>
     <nav>
     <div class="nav-color-wrapper">
         <ul class="nav">
-            <li><a href="<?php echo htmlspecialchars($this->data['nav_urls']['discover']['href']) ?>">Discover</a></li>
-            <li><a href="#">Download</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="/wiki/Discover" >Discover</a></li>
+            <li><a href="/wiki/Download" >Download</a></li>
+            <li><a href="/wiki/FAQ"      >FAQ</a></li>
+            <li><a href="/wiki/Community">Community</a></li>
+            <li><a href="/wiki/About"    >About</a></li>
             <li><a href="http://supertuxkart.blogspot.de/">Blog</a></li>
         </ul>
     </div>
