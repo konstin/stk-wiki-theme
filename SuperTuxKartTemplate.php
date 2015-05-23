@@ -42,6 +42,13 @@ $this->html( 'headelement' ); ?>
             alt="<?php $this->text( 'sitename' ) ?>"
         />
     </a>
+
+    <div class="searchform"><form action="<?php $this->text( 'wgScript' ); ?>">
+        <input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
+        <?php echo $this->makeSearchInput( array( 'type' => 'text' ) ); ?>
+        <!--?php echo $this->makeSearchButton( 'go' ); -->
+    </form></div>
+
 </div>
 </div>
 

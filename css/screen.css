@@ -69,6 +69,24 @@ h1, h2, h3, h4, h5 {
     bottom: 0px;
 }
 
+.header_container > .searchform {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: #ADADAD;
+    height: 25px;
+    width: 200px;
+    margin: 15px;
+    padding-left: 5px;
+    border-radius: 4px;
+}
+
+
+.searchform input {
+    background: none;
+    border: none;
+}
+
 /** other stuff -------------------------------------------------------------------------------- **/
 
 .outerbox {
