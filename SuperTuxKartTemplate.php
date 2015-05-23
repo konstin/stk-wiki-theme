@@ -22,12 +22,12 @@ $this->html( 'headelement' ); ?>
 <nav>
 <div class="nav-color-wrapper">
     <ul class="nav">
-        <li><a href="#">Discover</a></li>
+        <li><a href="<?php echo htmlspecialchars($this->data['nav_urls']['discover']['href']) ?>">Discover</a></li>
         <li><a href="#">Download</a></li>
         <li><a href="#">FAQ</a></li>
         <li><a href="#">Community</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="http://supertuxkart.blogspot.de/">Blog</a></li>
     </ul>
 </div>
 </nav>
@@ -46,40 +46,45 @@ $this->html( 'headelement' ); ?>
 
 <div class="main-content-wrapper">
 
-<div class="custom-dropdown-container">
-    <a href="#" class="custom-dropdown-trigger">Tools</a>
-    <div class="custom-dropdown">
-        <h5>General</h5>
-        <ul>
-        <?php
-            foreach ( $this->data['content_actions'] as $key => $tab ) {
-                echo $this->makeListItem( $key, $tab );
-            }
-        ?>
-        </ul>
+<p>Me</p>
+<ul class="toolbox">
+<?php
+foreach ( $this->getPersonalTools() as $key => $item ) {
+    echo $this->makeListItem( $key, $item );
+}
+?>
+</ul>
 
-        <?php
-        foreach ( $this->getSidebar() as $boxName => $box ) { ?>
-        <div id="<?php echo Sanitizer::escapeId( $box['id'] ) ?>"<?php echo Linker::tooltip( $box['id'] ) ?>>
-            <h5><?php echo htmlspecialchars( $box['header'] ); ?></h5>
-        <?php
-            if ( is_array( $box['content'] ) ) { ?>
-            <ul>
-        <?php
-                foreach ( $box['content'] as $key => $item ) {
-                    echo $this->makeListItem( $key, $item );
-                }
-        ?>
-            </ul>
-        <?php
-            } else {
-                echo $box['content'];
-            }
-        } ?>
-        </div>
-        </div>
-    </div>
-</div>
+<p>Page</p>
+<ul class="toolbox">
+<?php
+foreach ( $this->data['content_actions'] as $key => $item ) {
+    echo $this->makeListItem( $key, $item );
+}
+?>
+</ul>
+
+<p>Tools</p>
+<ul class="toolbox">
+<?php
+foreach ( $this->getToolbox() as $key => $item ) {
+    echo $this->makeListItem( $key, $item );
+}
+?>
+</ul>
+
+<p>Language Links</p>
+<ul>
+<?php
+if ( $this->data['language_urls'] ) {
+    foreach ( $this->data['language_urls'] as $key => $langLink ) {
+        echo $this->makeListItem( $key, $langLink );
+    }
+}
+?>
+</ul>
+
+
 
 <h1 id="firstHeading" class="firstHeading"><?php $this->html( 'title' ) ?></h1>
 
