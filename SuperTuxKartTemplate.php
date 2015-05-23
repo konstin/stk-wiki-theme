@@ -17,35 +17,37 @@ $this->html( 'headelement' ); ?>
 
 
 <div class="header_wrapper">
-<div class="login"><a href="#">Login | Register</a></div>
+<div class="header_container">
+    <div class="login"><a href="#">Login | Register</a></div>
 
-<nav>
-<div class="nav-color-wrapper">
-    <ul class="nav">
-        <li><a href="<?php echo htmlspecialchars($this->data['nav_urls']['discover']['href']) ?>">Discover</a></li>
-        <li><a href="#">Download</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="http://supertuxkart.blogspot.de/">Blog</a></li>
-    </ul>
+    <nav>
+    <div class="nav-color-wrapper">
+        <ul class="nav">
+            <li><a href="<?php echo htmlspecialchars($this->data['nav_urls']['discover']['href']) ?>">Discover</a></li>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="http://supertuxkart.blogspot.de/">Blog</a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <a class="logo"
+        href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
+        <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>
+    >
+        <img
+            src="<?php $this->text( 'logopath' ) ?>"
+            alt="<?php $this->text( 'sitename' ) ?>"
+        />
+    </a>
 </div>
-</nav>
-
-<a class="logo"
-    href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
-    <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>
->
-    <img
-        src="<?php $this->text( 'logopath' ) ?>"
-        alt="<?php $this->text( 'sitename' ) ?>"
-    />
-</a>
 </div>
 
 
 <div class="main-content-wrapper">
-
+<!--
 <p>Me</p>
 <ul class="toolbox">
 <?php
@@ -83,12 +85,13 @@ if ( $this->data['language_urls'] ) {
 }
 ?>
 </ul>
+-->
 
-
-
+<div class="content_wrapper">
 <h1 id="firstHeading" class="firstHeading"><?php $this->html( 'title' ) ?></h1>
 
 <?php $this->html( 'bodytext' ) ?>
+</div>
 
 </div>
 

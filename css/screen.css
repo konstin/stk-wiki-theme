@@ -1,10 +1,37 @@
 /** general stuff ------------------------------------------------------------------------------ **/
+@font-face {
+    font-family: Open Sans;
+    src: url('../fonts/OpenSans-Regular.woff2'),
+         url('../fonts/OpenSans-Regular.woff'),
+         url('../fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: Open Sans Light;
+    src: url('../fonts/OpenSans-Light.woff2'),
+         url('../fonts/OpenSans-Light.woff'),
+         url('../fonts/OpenSans-Light.ttf');
+}
+
 body {
-    background-image: url(../skins/supertuxkart/images/background.jpg);
-    font-family: sans;
-    font-size: 18px;
+    background-image: url('../images/background.jpg);
+    font-family: "Open Sans";
+    font-size: 16px;
     background-attachment: fixed;
     margin: 0px;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Open Sans Light";
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
 }
 
 /** header ------------------------------------------------------------------------------------- **/
@@ -20,34 +47,34 @@ body {
 }
 
 .header_wrapper {
-    background-image: url('../skins/supertuxkart/images/header.jpg');
+    background-image: url('../images/header.jpg');
     height: 130px;
+}
+
+.header_container {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
     position: relative;
 }
 
-.header_wrapper > a {
+.header_container > a {
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 15px;
+    left: -50px;
 }
 
-.header_wrapper > nav {
+.header_container > nav {
     position: absolute;
     bottom: 0px;
 }
 
 /** other stuff -------------------------------------------------------------------------------- **/
 
-a, a:hover {
-    text-decoration: none;
-}
-
 .outerbox {
     max-width: 100%;
-    margin: 0px auto;
     background-color: #ddd;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0 50px;
     /*padding: 5px;*/
 }
 
@@ -55,4 +82,8 @@ a, a:hover {
     padding: 10px;
 }
 
+.content_wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
