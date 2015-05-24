@@ -2,12 +2,15 @@
 /* http: //css-tricks.com/targetting-menu-elements-submenus-navigation-bar/ */
 nav {
     display: block;
-    width: 100%;
+    width: 1000px;
     font-size: 18px;
+    margin: auto;
 }
 
 .nav-color-wrapper {
     width: 100%;
+    position: absolute;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);
 }
 

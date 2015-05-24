@@ -48,11 +48,12 @@ h1, h2, h3, h4, h5 {
 
 .header_wrapper {
     background-image: url('../images/header.jpg');
+    position: relative;
     height: 130px;
 }
 
 .header_container {
-    width: 1000px;
+    /*width: 1000px;*/
     height: 100%;
     margin: 0 auto;
     position: relative;
@@ -81,6 +82,10 @@ h1, h2, h3, h4, h5 {
     border-radius: 4px;
 }
 
+.logo {
+    margin: 0 auto;
+    display: block;
+}
 
 .searchform input {
     background: none;
@@ -89,15 +94,20 @@ h1, h2, h3, h4, h5 {
 
 /** other stuff -------------------------------------------------------------------------------- **/
 
+.generic-limit {
+    margin: 0 50px;
+    max-width: 100%;
+}
+
 .outerbox {
     max-width: 100%;
-    background-color: #ddd;
-    margin: 0 50px;
+    /*margin: 0 50px;*/
     /*padding: 5px;*/
 }
 
 .main-content-wrapper {
     padding: 10px;
+    background-color: #ddd;
 }
 
 .content_wrapper {

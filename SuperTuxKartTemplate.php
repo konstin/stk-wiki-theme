@@ -17,7 +17,43 @@ $this->html( 'headelement' ); ?>
 
 
 <div class="header_wrapper">
-<div class="header_container">
+<div class="header_container generic-limit">
+
+
+    <div class="nav-color-wrapper">
+
+    
+        <nav>
+            <ul class="nav">
+                <li><a href="/wiki/Discover" >Discover</a></li>
+                <li><a href="/wiki/Download" >Download</a></li>
+                <li><a href="/wiki/FAQ"      >FAQ</a></li>
+                <li><a href="/wiki/Community">Community</a></li>
+                <li><a href="/wiki/About"    >About</a></li>
+                <li><a href="http://supertuxkart.blogspot.de/">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <a class="logo"
+        href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
+        <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>
+    >
+        <img
+            src="<?php $this->text( 'logopath' ) ?>"
+            alt="<?php $this->text( 'sitename' ) ?>"
+        />
+    </a>
+    
+    <div class="searchform"><form action="<?php $this->text( 'wgScript' ); ?>">
+        <input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
+        <?php echo $this->makeSearchInput( array( 'type' => 'text' ) ); ?>
+        <!--?php //echo $this->makeSearchButton( 'go' ); -->
+
+    </form>
+    </div>
+    
+<!--
     <div class="login"><a href="#">Login | Register</a></div>
 
     <nav>
@@ -46,14 +82,21 @@ $this->html( 'headelement' ); ?>
     <div class="searchform"><form action="<?php $this->text( 'wgScript' ); ?>">
         <input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
         <?php echo $this->makeSearchInput( array( 'type' => 'text' ) ); ?>
-        <!--?php echo $this->makeSearchButton( 'go' ); -->
+        <!--?php //echo $this->makeSearchButton( 'go' ); -->
+
+<!--
     </form></div>
+    
+    <div class="toolmenu">
+        Tools
+    </div>
+-->
 
 </div>
 </div>
 
 
-<div class="main-content-wrapper">
+<div class="main-content-wrapper generic-limit">
 <!--
 <p>Me</p>
 <ul class="toolbox">
