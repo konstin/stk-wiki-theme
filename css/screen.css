@@ -92,11 +92,46 @@ h1, h2, h3, h4, h5 {
     border: none;
 }
 
+/** toolbox ------------------------------------------------------------------------------------ **/
+.toolbox_wrapper {
+    background-color: #111;
+    color: #eee;
+    width: 270px;
+    /*display: none;*/
+}
+
+.toolbox_wrapper p {
+    margin: 0px;
+}
+
+.toolbox_title {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #555;
+}
+
+.toolbox_section {
+    background-color: #252525;
+    margin: 5px;
+}
+
+.toolbox_section p {
+    padding: 10px;
+
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #007534;
+}
+
 /** other stuff -------------------------------------------------------------------------------- **/
 
 .generic-limit {
     margin: 0 50px;
     max-width: 100%;
+}
+
+.generic-limit-content {
+    max-width: 1000px;
 }
 
 .outerbox {
