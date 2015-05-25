@@ -11,7 +11,8 @@ $this->html( 'headelement' ); ?>
 
 <!-- Header --------------------------------------------------------------------------------------->
 <div class="header_wrapper">
-<div class="header_color_wrapper generic-limit">
+<div class="header_color_wrapper_outer">
+<div class="header_color_wrapper_inner">
 <div class="header_container">
     <nav>
     <ul class="nav">
@@ -46,6 +47,7 @@ $this->html( 'headelement' ); ?>
 
     </div>
 
+</div>
 </div>
 </div>
 </div>
