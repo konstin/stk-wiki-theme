@@ -108,14 +108,14 @@ h1, h2, h3, h4, h5 {
 
 /** toolbox ------------------------------------------------------------------------------------ **/
 .toolbox_wrapper {
-    background-color: #575757;
-    color: #eee;
+    background-color: #aaa;
+    color: #222;
     width: 270px;
     float: left;
 }
 
 .toolbox_wrapper a {
-    color: #eee;
+    color: #111;
 }
 
 .toolbox_wrapper li {
@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .toolbox_wrapper li:nth-child(even) {
-    background: #2f2f2f
+    background: #ddd;
 }
 
 .toolbox_wrapper li:hover {
@@ -150,22 +150,22 @@ h1, h2, h3, h4, h5 {
 .toolbox_title {
     padding: 10px;
     font-size: 18px;
-    background-color: #555;
+    background-color: #777;
     text-align: center;
 }
 
 .toolbox_section {
-    background-color: #252525;
+    background-color: #ccc;
     margin: 5px;
     margin-bottom: 10px;
 }
 
 .toolbox_section p {
     padding: 5px;
-    background-color: #444;
+    background-color: #999;
     border-bottom-style: solid;
     border-bottom-width: 3px;
-    border-bottom-color: #007534;
+    border-bottom-color: #40A000;
 }
 
 /** other stuff -------------------------------------------------------------------------------- **/
