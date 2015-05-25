@@ -100,10 +100,33 @@ h1, h2, h3, h4, h5 {
     color: #eee;
     width: 270px;
     float: left;
-    display: none;
+    /*display: none;*/
+}
+
+.toolbox_wrapper a {
+    color: #eee;
+}
+
+.toolbox_wrapper li {
+    list-style-type: none;
+    padding: 2px;
+    padding-left: 10px;
+}
+
+.toolbox_wrapper li:nth-child(even) {
+    background: #2f2f2f
+}
+
+.toolbox_wrapper li:hover {
+    background-color: #00be50;
 }
 
 .toolbox_wrapper p {
+    margin: 0px;
+}
+
+.toolbox {
+    padding: 0px;
     margin: 0px;
 }
 
@@ -116,11 +139,12 @@ h1, h2, h3, h4, h5 {
 .toolbox_section {
     background-color: #252525;
     margin: 5px;
+    margin-bottom: 10px;
 }
 
 .toolbox_section p {
-    padding: 10px;
-
+    padding: 5px;
+    background-color: #444;
     border-bottom-style: solid;
     border-bottom-width: 3px;
     border-bottom-color: #007534;
