@@ -12,7 +12,7 @@ $this->html( 'headelement' ); ?>
 <div class="header_wrapper">
 <div class="header_color_wrapper_outer">
 <div class="header_color_wrapper_inner">
-<div class="header_container">
+<div class="navigation-tools">
     <nav>
     <ul class="nav">
             <li><a href="/wiki/Discover" >Discover</a></li>
@@ -53,7 +53,7 @@ $this->html( 'headelement' ); ?>
 
 
 <?php /* - Main Content ---------------------------------------------------------------------- */ ?>
-<div class="main-content-wrapper generic-limit">
+<div class="main-content-wrapper">
 
 
 <?php /* - Toolbox --------------------------------------------------------------------------- */ ?>
@@ -65,13 +65,13 @@ $tools = array( array("name" => "Actions", "tools" => array("edit", "move", "pro
 $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions'], $this->getToolbox());
 ?>
 
-<div class="toolbox_wrapper">
+<div class="toolbox">
     <p class="toolbox_title">Tools</p>
 
     <?php foreach ($tools as $tool) { ?>
         <div class="toolbox_section">
             <p><?php echo $tool["name"] ?></p>
-            <ul class="toolbox">
+            <ul>
             <?php
             foreach ($tool["tools"] as $toolname) {
                 foreach ($all_tools as $key => $item ) {
