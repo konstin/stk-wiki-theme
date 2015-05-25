@@ -8,10 +8,9 @@ $this->html( 'headelement' ); ?>
 
 <div class="outerbox"> <!-- currently unused -->
 
-
-<!-- Header --------------------------------------------------------------------------------------->
+<?php /* - Header ---------------------------------------------------------------------------- */ ?>
 <div class="header_wrapper">
-<div class="header_color_wrapper generic-limit">
+<div class="header_color_wrapper">
 <div class="header_container">
     <nav>
     <ul class="nav">
@@ -51,11 +50,11 @@ $this->html( 'headelement' ); ?>
 </div>
 
 
-<!-- Main content --------------------------------------------------------------------------------->
+<?php /* - Main Content ---------------------------------------------------------------------- */ ?>
 <div class="main-content-wrapper generic-limit">
 
 
-<!-- Toolbox -------------------------------------------------------------------------------------->
+<?php /* - Toolbox --------------------------------------------------------------------------- */ ?>
 <div class="toolbox_wrapper">
     <p class="toolbox_title">Tool box</p>
 
@@ -114,8 +113,9 @@ $this->html( 'headelement' ); ?>
 
 </div>
 
+plopy wood
 <?php $this->printTrail(); ?>
-
+mercury water
 </div> <!-- main-content-wrapper -->
 
 </body>

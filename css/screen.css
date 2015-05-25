@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5 {
 
 .logo {
     position: absolute;
-    left: -130px;
+    left: -100px;
     bottom: -40px;
 }
 
@@ -100,6 +100,7 @@ h1, h2, h3, h4, h5 {
     color: #eee;
     width: 270px;
     float: left;
+    display: none;
 }
 
 .toolbox_wrapper p {
@@ -144,4 +145,15 @@ h1, h2, h3, h4, h5 {
     max-width: 1000px;
     margin: 0 auto;
 }
+
+/*
+@media screen and (max-width: 1000px) {
+    .generic-limit {
+        margin: 0 10px;
+    }
+    
+    .header_wrapper {
+        background-image: none;
+    }
+}*/
 
