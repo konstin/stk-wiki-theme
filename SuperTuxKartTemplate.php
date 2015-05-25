@@ -57,49 +57,42 @@ $this->html( 'headelement' ); ?>
 
 
 <?php /* - Toolbox --------------------------------------------------------------------------- */ ?>
+<?php
+$tools = array( array("name" => "Actions", "tools" => array("edit", "move", "protect", "delete", "watch")),
+                array("name" => "Page",    "tools" => array("history", "whatlinkshere", "permalink", "info")),
+                array("name" => "Me",      "tools" => array("specialpages", "preferences", "watchlist", "mycontris", "logout")));
+
+$all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions'], $this->getToolbox());
+?>
+
 <div class="toolbox_wrapper">
-    <p class="toolbox_title">Tool box</p>
+    <p class="toolbox_title">Tools</p>
 
-    <div class="toolbox_section">
-        <p>Me</p>
-        <ul class="toolbox">
-        <?php
-        foreach ( $this->getPersonalTools() as $key => $item ) {
-            echo $this->makeListItem( $key, $item );
-        }
-        ?>
-        </ul>
-    </div>
-
-    <div class="toolbox_section">
-        <p>Page</p>
-        <ul class="toolbox">
-        <?php
-        foreach ( $this->data['content_actions'] as $key => $item ) {
-            echo $this->makeListItem( $key, $item );
-        }
-        ?>
-        </ul>
-    </div>
-
-    <div class="toolbox_section">
-        <p>Tools</p>
-        <ul class="toolbox">
-        <?php
-        foreach ( $this->getToolbox() as $key => $item ) {
-            echo $this->makeListItem( $key, $item );
-        }
-        ?>
-        </ul>
-    </div>
+    <?php foreach ($tools as $tool) { ?>
+        <div class="toolbox_section">
+            <p><?php echo $tool["name"] ?></p>
+            <ul class="toolbox">
+            <?php
+            foreach ($tool["tools"] as $toolname) {
+                foreach ($all_tools as $key => $item ) {
+                    if ($key == $toolname) {
+                        echo $this->makeListItem($key, $item);
+                        break; // Just to be sure
+                    }
+                }
+            }
+            ?>
+            </ul>
+        </div>
+    <?php } ?>
 
     <div class="toolbox_section">
         <p>Language Links</p>
         <ul>
         <?php
-        if ( $this->data['language_urls'] ) {
-            foreach ( $this->data['language_urls'] as $key => $langLink ) {
-                echo $this->makeListItem( $key, $langLink );
+        if ($this->data['language_urls']) {
+            foreach ($this->data['language_urls'] as $key => $item) {
+                echo $this->makeListItem($key, $item);
             }
         }
         ?>
