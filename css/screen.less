@@ -190,3 +190,54 @@ body {
     }
 }
 
+/** navigation bar **/
+/* inspired by http: //css-tricks.com/targetting-menu-elements-submenus-navigation-bar/ */
+nav {
+    display: block;
+    width: 1000px;
+    font-size: 18px;
+    height: 100%;
+}
+
+ul.nav {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    margin-left: 180px;
+    display: inline-block;
+
+    a {
+        color: white;
+        margin: 0px 10px;
+        padding: 16px 0px;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: orange;
+    }
+
+    li {
+        position: relative;
+        float: left;
+        height: 26px;
+        margin: 12px 0px;
+    }
+
+    li:before {
+        content: '|';
+        color: white;
+     }
+
+    li:first-child:before {
+       content: '';
+    }
+
+    li a:first-child:nth-last-child(2):before {
+        content: "";
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        top: 50%;
+    }
+}
