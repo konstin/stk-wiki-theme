@@ -75,16 +75,12 @@ h1, h2, h3, h4, h5 {
     position: absolute;
     right: 0px;
     bottom: 0px;
-    background-color: #ADADAD;
-    height: 25px;
-    width: 200px;
-    margin: 15px;
-    padding-left: 5px;
-    border-radius: 4px;
 }
 
-.header_tools_container {
-    width: 1000px;
+.header_container > .logo {
+    position: absolute;
+    left: -90px;
+    bottom: -40px;
 }
 
 .header_color_wrapper {
@@ -95,15 +91,25 @@ h1, h2, h3, h4, h5 {
     height: 50px;
 }
 
-.logo {
-    position: absolute;
-    left: -90px;
-    bottom: -40px;
+/** searchform **/
+
+.searchform {
+    height: 24px;
+    width: 200px;
+    margin: 13px;
+    padding: 0px 5px;
+    border-radius: 4px;
+    background-color: #ADADAD;
 }
 
 .searchform input {
-    background: none;
+    height: 20px;
+    width: 200px;
+    /* clean defaults */
+    background: transparent;
     border: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 /** toolbox ------------------------------------------------------------------------------------ **/
@@ -179,7 +185,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .main-content-wrapper {
-    padding: 10px;
+    padding: 30px;
     background-color: #ddd;
 }
 
@@ -188,14 +194,7 @@ h1, h2, h3, h4, h5 {
     margin: 0 auto;
 }
 
-/*
-@media screen and (max-width: 1000px) {
-    .generic-limit {
-        margin: 0 10px;
-    }
-
-    .header_wrapper {
-        background-image: none;
-    }
-}*/
+.firstHeading {
+    padding-top: 0px // This is done by the containers padding
+}
 
