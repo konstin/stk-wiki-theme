@@ -20,6 +20,7 @@ $this->html( 'headelement' ); ?>
             <li><a href="/wiki/FAQ"      >FAQ</a></li>
             <li><a href="/wiki/Community">Community</a></li>
             <li><a href="/wiki/About"    >About</a></li>
+            <li><a href="http://addons.supertuxkart.net">Add-ons</a></li>
             <li><a href="http://supertuxkart.blogspot.de/">Blog</a></li>
     </ul>
     </nav>
