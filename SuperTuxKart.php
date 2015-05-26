@@ -31,7 +31,7 @@ $wgMessagesDirs['SuperTuxKart'] = __DIR__ . '/i18n';
 
 $wgResourceModules['skins.supertuxkart'] = array(
     'styles' => array(
-        'supertuxkart.less' => array( 'media' => 'screen' ),
+        'supertuxkart.css' => array( 'media' => 'screen' ),
     ),
 
     'remoteSkinPath' => 'SuperTuxKart',

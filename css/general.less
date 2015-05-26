@@ -1,0 +1,32 @@
+/** declarations affecting the whole layout, e.g. fonts and variables **/
+@content-width: 1000px;
+@outermost-wrapper-margin: 50px;
+@nav-bar-height: 50px;
+
+@font-face {
+    font-family: Open Sans;
+    src: url('fonts/OpenSans-Regular.woff2'),
+         url('fonts/OpenSans-Regular.woff'),
+         url('fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: Open Sans Light;
+    src: url('fonts/OpenSans-Light.woff2'),
+         url('fonts/OpenSans-Light.woff'),
+         url('fonts/OpenSans-Light.ttf');
+}
+
+body {
+    font-family: "Open Sans";
+    font-size: 16px;
+    margin: 0px;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Open Sans Light";
+}
