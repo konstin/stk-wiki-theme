@@ -12,8 +12,25 @@ body {
 .content_wrapper {
     max-width: @content-width;
     margin: 0px auto;
+    position: relative;
 }
 
 .firstHeading {
     margin-top: 0px;
+}
+
+.tool-icons {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    > a {
+        margin: 5px;
+        color: gray;
+        position: relative;
+        > div {
+            position: absolute;
+            margin-top: 10px;
+        }
+    }
 }

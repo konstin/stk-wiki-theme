@@ -4,33 +4,22 @@
  * @ingroup Skins
  */
 class SkinSuperTuxKart extends SkinTemplate {
-    var $skinname = 'supertuxkart', $stylename = 'SuperTuxKart',
-        $template = 'SuperTuxKartTemplate', $useHeadElement = true;
+    var $skinname       = 'supertuxkart',
+        $stylename      = 'SuperTuxKart',
+        $template       = 'SuperTuxKartTemplate',
+        $useHeadElement = true;
 
-    /**
-     * Add JavaScript via ResourceLoader
-     *
-     * Uncomment this function if your skin has a JS file or files.
-     * Otherwise you won't need this function and you can safely delete it.
-     *
-     * @param OutputPage $out
-     */
-    /*
-    public function initPage( OutputPage $out ) {
-        parent::initPage( $out );
-        $out->addModules( 'skins.supertuxkart.js' );
+    /** Add Javascript declared in SuperTuxKart.php through $wgResourceModules here **/
+    public function initPage(OutputPage $out) {
+        parent::initPage($out);
+        $out->addModules('skins.supertuxkart.dropdown.js');
     }
-    */
 
-    /**
-     * Add CSS via ResourceLoader
-     *
-     * @param $out OutputPage
-     */
-    function setupSkinUserCss( OutputPage $out ) {
-        parent::setupSkinUserCss( $out );
-        $out->addModuleStyles( array(
-           'skins.supertuxkart', 'skins.supertuxkart.js', //  'mediawiki.skinning.interface' <- default styles
-        ) );
+    /** Add CSS declared in SuperTuxKart.php through $wgResourceModules here **/
+    function setupSkinUserCss(OutputPage $out) {
+        parent::setupSkinUserCss($out);
+        $out->addModuleStyles(array(
+           'skins.supertuxkart', //  'mediawiki.skinning.interface' <- default styles
+        ));
     }
 }

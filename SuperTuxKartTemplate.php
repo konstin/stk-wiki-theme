@@ -56,12 +56,13 @@ $this->html( 'headelement' ); ?>
 <?php /* - Main Content ---------------------------------------------------------------------- */ ?>
 <div class="main-content-wrapper">
 
-
 <?php /* - Toolbox --------------------------------------------------------------------------- */ ?>
 <?php
-$tools = array( array("name" => "Actions", "tools" => array("edit", "move", "protect", "delete", "watch")),
+$admin_tools = array( array("name" => "Actions", "tools" => array("edit", "move", "protect", "delete", "watch")),
                 array("name" => "Page",    "tools" => array("history", "whatlinkshere", "permalink", "info")),
                 array("name" => "Me",      "tools" => array("specialpages", "preferences", "watchlist", "mycontris", "logout")));
+
+$user_tools = array("history", "whatlinkshere", "permalink", "info", "specialpages");
 
 $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions'], $this->getToolbox());
 ?>
@@ -69,7 +70,7 @@ $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions
 <div class="toolbox">
     <p class="toolbox_title">Tools</p>
 
-    <?php foreach ($tools as $tool) { ?>
+    <?php foreach ($admin_tools as $tool) { ?>
         <div class="toolbox_section">
             <p><?php echo $tool["name"] ?></p>
             <ul>
@@ -102,6 +103,33 @@ $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions
 </div>
 
 <div class="content_wrapper">
+<div class="tool-icons">
+    <a href="#" class="fa fa-globe fa-lg language-dropdown">
+    <div style="display: none;">
+        <ul>
+        <li>Language 1</li>
+        <li>Language 2</li>
+        <li>Language 3</li>
+        </ul>
+    </div>
+    </a>
+    <a href="#" class="fa fa-cog fa-lg options-dropdown">
+    <div style="display: none;">
+        <ul>
+        <?php
+        foreach ($user_tools as $toolname) {
+            foreach ($all_tools as $key => $item ) {
+                if ($key == $toolname) {
+                    echo $this->makeListItem($key, $item);
+                    break; // Just to be sure
+                }
+            }
+        }
+        ?>
+        </ul>
+    </div>
+    </a>
+</div>
 <h1 id="firstHeading" class="firstHeading"><?php $this->html( 'title' ) ?></h1>
 
 <?php $this->html( 'bodytext' ) ?>
