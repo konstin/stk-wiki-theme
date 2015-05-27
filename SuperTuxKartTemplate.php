@@ -140,32 +140,31 @@ $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions
 <?php $this->printTrail(); ?>
 </div> <!-- main-content-wrapper -->
 
+
+<?php /* - Footer (copyright section, various menu etc) -------------------------------------- */ ?>
 <div class="footer-wrapper">
 
+<div class="footer-links">
 <?php
 $footerSection = array(
     array("name" => "Community",    "items" => array("Forum", "Blog", "Twitter", "Addons", "irc: #stk@freenode")),
-    array("name" => "Media",    "items" => array("YouTube", "Screenshots", "Posters"))
+    array("name" => "Media",        "items" => array("YouTube", "Screenshots", "Posters")),
+    array("name" => "Developement", "items" => array("Modding SuperTuxKart", "Github", "Technical Documentation")),
+    array("name" => "About Us",     "items" => array("FAQ", "Who we are", "SuperTuxKart used in projects", "Terms and Conditions"))
 );
 
 foreach ($footerSection as $section){
-    echo "<pre> Hi :)";
-    print_r($section);
-    echo "</pre>";
+    echo "<p>", $section["name"], "</p>";
+    echo "<ul>";
+        foreach($section["items"] as $item){
+            echo "<li>", $item, "</li>";
+        }
+    echo "</ul>";
 }
 
 ?>
+</div>
 
-Developement
- Modding SuperTuxKart
- Github
- Technical Documentation
-
-About Us
- FAQ
- Who we are
- SuperTuxKart used in projects
- Terms and Conditions
 
 (c) 2015 STK dev team
 Powered by Media Wiki
