@@ -1,16 +1,34 @@
 .footer-wrapper {
     background-color: #333;
     color: #ddd;
+    margin: 0 50px;
 }
 
 .footer-links {
     background-color: #111;
     
     table, th, td {
-        border: 1px solid white;
+        /*border: 1px solid white;*/
+    }
+    
+    td {
+        padding-left: 10px;
+    }
+    
+    th {
+        text-align: left;
     }
     
     table {
-        width: 100%;
+        width: 1000px;
+        table-layout: fixed;
+        margin: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
+}
+
+.footer-copyright {
+    padding: 10px;
+    text-align: center;
 }

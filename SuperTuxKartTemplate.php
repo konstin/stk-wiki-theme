@@ -210,12 +210,13 @@ echo $content;
 </table>
 </div>
 
-
-(c) 2015 STK dev team
-Powered by Media Wiki
-Site design by Konstin & Sam
+<div class="footer-copyright">
+(c) 2015 STK dev team<br />
+Powered by Media Wiki<br />
+Site design by Konstin & Sam<br /><br />
 
 STK Developement Team © 2015
+</div>
 
 </div>
 
