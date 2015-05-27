@@ -24,13 +24,35 @@ body {
     right: 0px;
     top: 0px;
 
-    > a {
-        margin: 5px;
-        color: gray;
-        position: relative;
-        > div {
+    div.tool-dropdown {
+        float: left;
+        postion: relative;
+
+        > button {
+            position: relative;
+            margin: 0px;
+            padding: 0px;
+            background-color: transparent;
+            border: none;
+            color: gray;
+        }
+
+        > div{
             position: absolute;
-            margin-top: 10px;
+            background-color: gray;
+            margin: 0px;
+            padding: 5px;
+            width: 180px;
+
+            ul {
+                padding: 0px;
+                margin: 0px;
+                list-style: none;
+
+                li {
+                    margin: 5px;
+                }
+            }
         }
     }
 }

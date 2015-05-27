@@ -96,31 +96,34 @@ $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions
 
 <div class="content_wrapper">
 <div class="tool-icons">
-    <a href="#" class="fa fa-globe fa-lg language-dropdown">
-    <div style="display: none;">
-        <ul>
-        <li>Language 1</li>
-        <li>Language 2</li>
-        <li>Language 3</li>
-        </ul>
+    <div class="tool-dropdown language-dropdown">
+        <button href="#" class="fa fa-globe fa-lg"></button>
+        <div style="display: none;">
+            <ul>
+                <li>Language 1</li>
+                <li>Language 2</li>
+                <li>Language 3</li>
+            </ul>
+        </div>
     </div>
-    </a>
-    <a href="#" class="fa fa-cog fa-lg options-dropdown">
-    <div style="display: none;">
-        <ul>
-        <?php
-        foreach ($user_tools as $toolname) {
-            foreach ($all_tools as $key => $item ) {
-                if ($key == $toolname) {
-                    echo $this->makeListItem($key, $item);
-                    break; // Just to be sure
+
+    <div class="tool-dropdown options-dropdown">
+        <button href="#" class="fa fa-cog fa-lg"></button>
+        <div style="display: none;">
+            <ul>
+            <?php
+            foreach ($user_tools as $toolname) {
+                foreach ($all_tools as $key => $item ) {
+                    if ($key == $toolname) {
+                        echo $this->makeListItem($key, $item);
+                        break; // Just to be sure
+                    }
                 }
             }
-        }
-        ?>
-        </ul>
+            ?>
+            </ul>
+        </div>
     </div>
-    </a>
 </div>
 <h1 class="first-heading"><?php $this->html( 'title' ) ?></h1>
 
@@ -191,7 +194,7 @@ foreach ($footer_section as $column) { ?>
 Powered by MediaWiki<br />
 Site design by Konstin & Sam<br /><br />
 
-STK Developement Team © 2015
+SuperTuxKart Team © 2015
 </div>
 
 </footer>
