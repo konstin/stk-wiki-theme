@@ -152,30 +152,30 @@ $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions
 $footerSection = array (
     0 => array (
         0 => 'Community',
-        1 => 'Forum',
-        2 => 'Blog',
-        3 => 'Twitter',
-        4 => 'Addons',
-        5 => 'irc: #stk@freenode'
+        1 => array('Forum', 'http://forum.freegamedev.net/viewforum.php?f=16'),
+        2 => array('Blog', 'http://supertuxkart.blogspot.com/'),
+        3 => array('Twitter', 'https://twitter.com/supertuxkart'),
+        4 => array('Addons', 'http://addons.supertuxkart.net/'),
+        5 => array('irc: #stk@freenode', 'http://webchat.freenode.net?channels=%23stk&uio=d4')
     ),
     1 => array (
         0 => 'Media',
-        1 => 'YouTube',
-        2 => 'Screenshots',
-        3 => 'Posters'
+        1 => array('YouTube', 'https://www.youtube.com/channel/UCJ9hmn6MG_ggpQUhmbMS2mQ'),
+        2 => array('Screenshots', 'http://supertuxkart.sourceforge.net/Screenshots_Old'),
+        3 => array('Posters', 'http://supertuxkart.sourceforge.net/Posters')
     ),
     2 => array (
         0 => 'Developement',
-        1 => 'Modding SuperTuxKart',
-        2 => 'GitHub',
-        3 => 'Technical Documentation'
+        1 => array('Modding SuperTuxKart', 'http://supertuxkart.sourceforge.net/Track_Maker%27s_Guide'),
+        2 => array('GitHub', 'https://github.com/supertuxkart'),
+        3 => array('Technical Documentation', 'http://supertuxkart.sourceforge.net/doxygen')
     ),
     3 => array (
         0 => 'About Us',
-        1 => 'FAQ',
-        2 => 'Who we are',
-        3 => 'SuperTuxKart used in projects',
-        4 => 'Terms and Conditions'
+        1 => array('FAQ', 'http://supertuxkart.sourceforge.net/FAQ'),
+        2 => array('Who we are', 'http://supertuxkart.sourceforge.net/core_team'),
+        3 => array('SuperTuxKart used in projects', 'http://supertuxkart.sourceforge.net/projects'),
+        4 => array('Terms and Conditions', 'http://supertuxkart.sourceforge.net/Terms')
     )
 );
 
@@ -194,7 +194,12 @@ for ($inner=0; $inner < count($footerSection[0]); $inner++) {
         if(count($footerSection[$outer]) <= $inner) {
             $content .= "<$tag></$tag>";
         } else {
-            $content .= "<$tag>{$footerSection[$outer][$inner]}</$tag>";
+            if ($inner != 0) {
+                $footerUrlName = "<a href='" . $footerSection[$outer][$inner][1] . "'>" . $footerSection[$outer][$inner][0] . "</a>";
+            } else {
+                $footerUrlName = $footerSection[$outer][$inner];
+            }
+            $content .= "<$tag>{$footerUrlName}</$tag>";
         }
     }
 
@@ -211,7 +216,6 @@ echo $content;
 </div>
 
 <div class="footer-copyright">
-(c) 2015 STK dev team<br />
 Powered by Media Wiki<br />
 Site design by Konstin & Sam<br /><br />
 

@@ -1,20 +1,28 @@
 .footer-wrapper {
-    background-color: #333;
+    background-color: #111;
     color: #ddd;
     margin: 0 50px;
 }
 
 .footer-links {
     background-color: #111;
+    padding-top: 15px;
+    padding-bottom: 15px;
     
-    table, th, td {
-        /*border: 1px solid white;*/
+    a {
+        color: orange;
+    }
+    
+    a:hover {
+        color: #111;
+        background-color: orange;
     }
     
     td {
         padding-left: 10px;
+        width: 100%;
     }
-    
+
     th {
         text-align: left;
     }
@@ -23,12 +31,14 @@
         width: 1000px;
         table-layout: fixed;
         margin: auto;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        
+        border-collapse: collapse;
     }
 }
 
 .footer-copyright {
     padding: 10px;
+    color: #888;
     text-align: center;
+    padding-bottom: 20px;
 }
