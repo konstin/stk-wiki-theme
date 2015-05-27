@@ -145,24 +145,69 @@ $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions
 <div class="footer-wrapper">
 
 <div class="footer-links">
+<table>
 <?php
-$footerSection = array(
-    array("name" => "Community",    "items" => array("Forum", "Blog", "Twitter", "Addons", "irc: #stk@freenode")),
-    array("name" => "Media",        "items" => array("YouTube", "Screenshots", "Posters")),
-    array("name" => "Developement", "items" => array("Modding SuperTuxKart", "Github", "Technical Documentation")),
-    array("name" => "About Us",     "items" => array("FAQ", "Who we are", "SuperTuxKart used in projects", "Terms and Conditions"))
+
+// Data to be displayed at the end
+$footerSection = array (
+    0 => array (
+        0 => 'Community',
+        1 => 'Forum',
+        2 => 'Blog',
+        3 => 'Twitter',
+        4 => 'Addons',
+        5 => 'irc: #stk@freenode'
+    ),
+    1 => array (
+        0 => 'Media',
+        1 => 'YouTube',
+        2 => 'Screenshots',
+        3 => 'Posters'
+    ),
+    2 => array (
+        0 => 'Developement',
+        1 => 'Modding SuperTuxKart',
+        2 => 'GitHub',
+        3 => 'Technical Documentation'
+    ),
+    3 => array (
+        0 => 'About Us',
+        1 => 'FAQ',
+        2 => 'Who we are',
+        3 => 'SuperTuxKart used in projects',
+        4 => 'Terms and Conditions'
+    )
 );
 
-foreach ($footerSection as $section){
-    echo "<p>", $section["name"], "</p>";
-    echo "<ul>";
-        foreach($section["items"] as $item){
-            echo "<li>", $item, "</li>";
+
+$content = "<table>\n";
+
+// This loop makes the link footer link table
+for ($inner=0; $inner < count($footerSection[0]); $inner++) {
+    $content .= "<tr>";
+
+    // Generating table cell
+    for ($outer=0; $outer < count($footerSection); $outer++) {
+        // First row is an header
+        $tag = ($inner == 0) ? "th" : "td";
+        // detect if there is no row. Put empty content
+        if(count($footerSection[$outer]) <= $inner) {
+            $content .= "<$tag></$tag>";
+        } else {
+            $content .= "<$tag>{$footerSection[$outer][$inner]}</$tag>";
         }
-    echo "</ul>";
+    }
+
+    $content .= "</tr>\n";
 }
 
+$content .= "</table>\n";
+
+echo $content;
+
+
 ?>
+</table>
 </div>
 
 
