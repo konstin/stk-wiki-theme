@@ -19,9 +19,6 @@ $this->html( 'headelement' ); ?>
             <li><a href="/wiki/Download" >Download</a></li>
             <li><a href="/wiki/FAQ"      >FAQ</a></li>
             <li><a href="/wiki/Community">Community</a></li>
-            <li><a href="/wiki/About"    >About</a></li>
-            <li><a href="http://addons.supertuxkart.net">Add-ons</a></li>
-            <li><a href="http://supertuxkart.blogspot.de/">Blog</a></li>
     </ul>
     </nav>
 
@@ -67,7 +64,7 @@ $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions
 
     <?php foreach ($admin_tools as $tool) { ?>
         <div class="toolbox_section">
-            <p><?php echo $tool["name"] ?></p>
+            <p><?= $tool["name"] ?></p>
             <ul>
             <?php
             foreach ($tool["tools"] as $toolname) {
@@ -125,9 +122,14 @@ $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions
     </div>
     </a>
 </div>
-<h1 id="firstHeading" class="firstHeading"><?php $this->html( 'title' ) ?></h1>
+<h1 class="first-heading"><?php $this->html( 'title' ) ?></h1>
 
+
+<?php /* Main Content ----------------------------------------------------------------------- */ ?>
+
+<article>
 <?php $this->html( 'bodytext' ) ?>
+</article>
 </div>
 
 </div>
@@ -171,19 +173,18 @@ $footer_section = array (
 
 <?php
 // This loop makes the link footer link table
-foreach ($footer_section as $column) {
-    echo "<div><p>" . $column['heading'] . "</p>\n";
-    echo "<ul>";
+foreach ($footer_section as $column) { ?>
+    <div><p> <?= $column['heading'] ?> </p>
+    <ul>
 
-    // Generating table cell
-    foreach ($column['entries'] as $entry) {
-        echo "<li><a href='" . $entry[1] . "'>" . $entry[0] . "</a></li>";
-    }
+    <?php // Generating table cell
+    foreach ($column['entries'] as $entry) { ?>
+        <li><a href='<?= $entry[1] ?>'> <?= $entry[0] ?> </a></li>
+    <?php } ?>
 
-    echo "</ul>\n";
-    echo "</div>\n";
-}
-?>
+    </ul>
+    </div>
+<?php } ?>
 </div>
 
 <div class="footer-copyright">
