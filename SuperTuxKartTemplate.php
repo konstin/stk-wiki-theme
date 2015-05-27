@@ -137,10 +137,43 @@ $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions
 
 </div>
 
-plopy wood
 <?php $this->printTrail(); ?>
-mercury water
 </div> <!-- main-content-wrapper -->
+
+<div class="footer-wrapper">
+
+<?php
+$footerSection = array(
+    array("name" => "Community",    "items" => array("Forum", "Blog", "Twitter", "Addons", "irc: #stk@freenode")),
+    array("name" => "Media",    "items" => array("YouTube", "Screenshots", "Posters"))
+);
+
+foreach ($footerSection as $section){
+    echo "<pre> Hi :)";
+    print_r($section);
+    echo "</pre>";
+}
+
+?>
+
+Developement
+ Modding SuperTuxKart
+ Github
+ Technical Documentation
+
+About Us
+ FAQ
+ Who we are
+ SuperTuxKart used in projects
+ Terms and Conditions
+
+(c) 2015 STK dev team
+Powered by Media Wiki
+Site design by Konstin & Sam
+
+STK Developement Team © 2015
+
+</div>
 
 </body>
 </html><?php
