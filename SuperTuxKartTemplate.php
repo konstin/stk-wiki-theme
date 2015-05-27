@@ -15,7 +15,7 @@ $this->html( 'headelement' ); ?>
 <div class="navigation-tools">
     <nav>
     <ul class="nav">
-            <li><a href="/wiki/Discover" >Discover</a></li>
+            <li><a href="/wiki/Download" >Discover</a></li>
             <li><a href="/wiki/Download" >Download</a></li>
             <li><a href="/wiki/FAQ"      >FAQ</a></li>
             <li><a href="/wiki/Community">Community</a></li>
@@ -36,15 +36,10 @@ $this->html( 'headelement' ); ?>
     </a>
 
     <div class="searchform">
-        <form action="<?php $this->text( 'wgScript' ); ?>">
-            <input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
-            <?php echo $this->makeSearchInput( array( 'type' => 'text' ) ); ?>
-        </form>
-
-        <!--div class="toolmenu">
-            Tools
-        </div-->
-
+    <form action="<?php $this->text( 'wgScript' ); ?>">
+        <input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
+        <?php echo $this->makeSearchInput( array( 'type' => 'text' ) ); ?>
+    </form>
     </div>
 
 </div>
@@ -59,8 +54,8 @@ $this->html( 'headelement' ); ?>
 <?php /* - Toolbox --------------------------------------------------------------------------- */ ?>
 <?php
 $admin_tools = array( array("name" => "Actions", "tools" => array("edit", "move", "protect", "delete", "watch")),
-                array("name" => "Page",    "tools" => array("history", "whatlinkshere", "permalink", "info")),
-                array("name" => "Me",      "tools" => array("specialpages", "preferences", "watchlist", "mycontris", "logout")));
+                      array("name" => "Page",    "tools" => array("history", "whatlinkshere", "permalink", "info")),
+                      array("name" => "Me",      "tools" => array("specialpages", "preferences", "watchlist", "mycontris", "logout")));
 
 $user_tools = array("history", "whatlinkshere", "permalink", "info", "specialpages");
 
@@ -137,92 +132,70 @@ $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions
 
 </div>
 
-<?php $this->printTrail(); ?>
 </div> <!-- main-content-wrapper -->
 
 
 <?php /* - Footer (copyright section, various menu etc) -------------------------------------- */ ?>
-<div class="footer-wrapper">
+<footer>
 
 <div class="footer-links">
-<table>
 <?php
 
 // Data to be displayed at the end
-$footerSection = array (
-    0 => array (
-        0 => 'Community',
-        1 => array('Forum', 'http://forum.freegamedev.net/viewforum.php?f=16'),
-        2 => array('Blog', 'http://supertuxkart.blogspot.com/'),
-        3 => array('Twitter', 'https://twitter.com/supertuxkart'),
-        4 => array('Addons', 'http://addons.supertuxkart.net/'),
-        5 => array('irc: #stk@freenode', 'http://webchat.freenode.net?channels=%23stk&uio=d4')
-    ),
-    1 => array (
-        0 => 'Media',
-        1 => array('YouTube', 'https://www.youtube.com/channel/UCJ9hmn6MG_ggpQUhmbMS2mQ'),
-        2 => array('Screenshots', 'http://supertuxkart.sourceforge.net/Screenshots_Old'),
-        3 => array('Posters', 'http://supertuxkart.sourceforge.net/Posters')
-    ),
-    2 => array (
-        0 => 'Developement',
-        1 => array('Modding SuperTuxKart', 'http://supertuxkart.sourceforge.net/Track_Maker%27s_Guide'),
-        2 => array('GitHub', 'https://github.com/supertuxkart'),
-        3 => array('Technical Documentation', 'http://supertuxkart.sourceforge.net/doxygen')
-    ),
-    3 => array (
-        0 => 'About Us',
-        1 => array('FAQ', 'http://supertuxkart.sourceforge.net/FAQ'),
-        2 => array('Who we are', 'http://supertuxkart.sourceforge.net/core_team'),
-        3 => array('SuperTuxKart used in projects', 'http://supertuxkart.sourceforge.net/projects'),
-        4 => array('Terms and Conditions', 'http://supertuxkart.sourceforge.net/Terms')
-    )
+$footer_section = array (
+    array( 'heading' => 'Community', 'entries' => array (
+        array('Forum', 'http://forum.freegamedev.net/viewforum.php?f=16'),
+        array('Blog', 'http://supertuxkart.blogspot.com/'),
+        array('Twitter', 'https://twitter.com/supertuxkart'),
+        array('Addons', 'http://addons.supertuxkart.net/'),
+        array('irc: #stk@freenode', 'http://webchat.freenode.net?channels=%23stk&uio=d4')
+    )),
+    array( 'heading' => 'Media', 'entries' => array (
+        array('YouTube', 'https://www.youtube.com/channel/UCJ9hmn6MG_ggpQUhmbMS2mQ'),
+        array('Pictures', '/wiki/Pictures'),
+        array('Posters', '/wiki/Posters')
+    )),
+    array( 'heading' => 'Developement', 'entries' => array (
+        array('Modding', '/wiki/Track_Maker%27s_Guide'),
+        array('GitHub', 'https://github.com/supertuxkart/stk-code'),
+        array('Doxygen', 'http://supertuxkart.sourceforge.net/doxygen')
+    )),
+    array( 'heading' => 'About us', 'entries' => array (
+        array('FAQ', '/wiki/FAQ'),
+        array('Who we are', '/wiki/Team'),
+        array('About SuperTuxKart', '/wiki/About_SuperTuxKart'),
+        array('SuperTuxKart in other projects', '/wiki/Projects'),
+    ))
 );
+?>
 
-
-$content = "<table>\n";
-
+<?php
 // This loop makes the link footer link table
-for ($inner=0; $inner < count($footerSection[0]); $inner++) {
-    $content .= "<tr>";
+foreach ($footer_section as $column) {
+    echo "<div><p>" . $column['heading'] . "</p>\n";
+    echo "<ul>";
 
     // Generating table cell
-    for ($outer=0; $outer < count($footerSection); $outer++) {
-        // First row is an header
-        $tag = ($inner == 0) ? "th" : "td";
-        // detect if there is no row. Put empty content
-        if(count($footerSection[$outer]) <= $inner) {
-            $content .= "<$tag></$tag>";
-        } else {
-            if ($inner != 0) {
-                $footerUrlName = "<a href='" . $footerSection[$outer][$inner][1] . "'>" . $footerSection[$outer][$inner][0] . "</a>";
-            } else {
-                $footerUrlName = $footerSection[$outer][$inner];
-            }
-            $content .= "<$tag>{$footerUrlName}</$tag>";
-        }
+    foreach ($column['entries'] as $entry) {
+        echo "<li><a href='" . $entry[1] . "'>" . $entry[0] . "</a></li>";
     }
 
-    $content .= "</tr>\n";
+    echo "</ul>\n";
+    echo "</div>\n";
 }
-
-$content .= "</table>\n";
-
-echo $content;
-
-
 ?>
-</table>
 </div>
 
 <div class="footer-copyright">
-Powered by Media Wiki<br />
+Powered by MediaWiki<br />
 Site design by Konstin & Sam<br /><br />
 
 STK Developement Team © 2015
 </div>
 
-</div>
+</footer>
+
+<?php $this->printTrail(); // includes scripts etc. ?>
 
 </body>
 </html><?php

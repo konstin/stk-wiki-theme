@@ -1,39 +1,45 @@
-.footer-wrapper {
-    background-color: #111;
+footer {
+    background-color: rgba(10, 10, 10, 0.9);
     color: #ddd;
     margin: 0 50px;
 }
 
 .footer-links {
-    background-color: #111;
     padding-top: 15px;
     padding-bottom: 15px;
-    
+    width: 1000px;
+    margin: 0 auto;
+
     a {
         color: orange;
     }
-    
+
     a:hover {
         color: #111;
         background-color: orange;
     }
-    
-    td {
-        padding-left: 10px;
-        width: 100%;
-    }
 
-    th {
-        text-align: left;
+    div {
+        float: left;
+        width: 25%;
+
+        p {
+            margin: 0px;
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 0px;
+            list-style: none;
+            padding-left: 10px;
+        }
     }
-    
-    table {
-        width: 1000px;
-        table-layout: fixed;
-        margin: auto;
-        
-        border-collapse: collapse;
-    }
+}
+
+.footer-links:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .footer-copyright {
