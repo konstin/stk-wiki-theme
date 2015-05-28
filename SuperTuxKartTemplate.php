@@ -165,7 +165,7 @@ $footer_section = array (
         array('FAQ', '/wiki/FAQ'),
         array('Who we are', '/wiki/Team'),
         array('About SuperTuxKart', '/wiki/About_SuperTuxKart'),
-        array('SuperTuxKart in other projects', '/wiki/Projects'),
+        array('Projects using SuperTuxKart', '/wiki/Projects'),
     ))
 );
 ?>
@@ -187,8 +187,8 @@ foreach ($footer_section as $column) { ?>
 </div>
 
 <div class="footer-copyright">
-Powered by MediaWiki<br />
-Site design by Konstin & Sam<br /><br />
+Site design by Konstin & Sam<br />
+Powered by <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki<a><br /><br />
 
 SuperTuxKart Team © 2015
 </div>
