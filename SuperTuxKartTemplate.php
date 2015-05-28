@@ -59,6 +59,28 @@ $user_tools = array("history", "whatlinkshere", "permalink", "info", "specialpag
 $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions'], $this->getToolbox());
 ?>
 
+
+
+<div class="content_wrapper">
+<div class="tool-icons">
+    <div class="tool-dropdown language-dropdown">
+        <button href="#" class="fa fa-globe fa-lg"></button>
+        <div style="display: none;">
+            <ul>
+                <li>Language 1</li>
+                <li>Language 2</li>
+                <li>Language 3</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="tool-dropdown options-dropdown">
+        <button href="#" class="fa fa-cog fa-lg"></button>
+        <div style="display: none;">
+            <ul>
+
 <div class="toolbox">
     <p class="toolbox_title">Tools</p>
 
@@ -94,33 +116,7 @@ $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions
     </div>
 </div>
 
-<div class="content_wrapper">
-<div class="tool-icons">
-    <div class="tool-dropdown language-dropdown">
-        <button href="#" class="fa fa-globe fa-lg"></button>
-        <div style="display: none;">
-            <ul>
-                <li>Language 1</li>
-                <li>Language 2</li>
-                <li>Language 3</li>
-            </ul>
-        </div>
-    </div>
 
-    <div class="tool-dropdown options-dropdown">
-        <button href="#" class="fa fa-cog fa-lg"></button>
-        <div style="display: none;">
-            <ul>
-            <?php
-            foreach ($user_tools as $toolname) {
-                foreach ($all_tools as $key => $item ) {
-                    if ($key == $toolname) {
-                        echo $this->makeListItem($key, $item);
-                        break; // Just to be sure
-                    }
-                }
-            }
-            ?>
             </ul>
         </div>
     </div>
