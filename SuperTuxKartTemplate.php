@@ -108,13 +108,15 @@ $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions
         </div>
     </div>
 </div>
-<h1 class="first-heading"><?php $this->html( 'title' ) ?></h1>
 
 
 <?php /* Main Content ----------------------------------------------------------------------- */ ?>
 
+<?php if ($this->data['title'] != 'Main Page') { ?>
+    <h1 class="article-title"><?php $this->html('title') ?></h1>
+<?php } ?>
 <article>
-<?php $this->html( 'bodytext' ) ?>
+<?php $this->html('bodytext') ?>
 </article>
 </div>
 
@@ -175,7 +177,7 @@ foreach ($footer_section as $column) { ?>
 
 <div class="footer-copyright">
 Site design by Konstin & Sam<br />
-Powered by <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki<a><br /><br />
+Powered by <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a>a><br /><br />
 
 SuperTuxKart Team © 2015
 </div>
