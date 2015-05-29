@@ -5,4 +5,3 @@ $(".language-dropdown > button").click(function(){
 $(".options-dropdown > button").click(function(){
     $(".options-dropdown > div").toggle();
 });
-

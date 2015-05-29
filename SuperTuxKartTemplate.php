@@ -8,6 +8,7 @@ $this->html( 'headelement' ); ?>
 
 <div class="outerbox"> <!-- currently unused -->
 
+
 <?php /* - Header ---------------------------------------------------------------------------- */ ?>
 <div class="header_wrapper">
 <div class="header_color_wrapper_outer">
@@ -15,28 +16,26 @@ $this->html( 'headelement' ); ?>
 <div class="navigation-tools">
     <nav>
     <ul class="nav">
-            <li><a href="/wiki/Download" >Discover</a></li>
-            <li><a href="/wiki/Download" >Download</a></li>
-            <li><a href="/wiki/FAQ"      >FAQ</a></li>
-            <li><a href="/wiki/Community">Community</a></li>
+        <li><a href="/wiki/Download" >Discover </a></li>
+        <li><a href="/wiki/Download" >Download </a></li>
+        <li><a href="/wiki/FAQ"      >FAQ      </a></li>
+        <li><a href="/wiki/Community">Community</a></li>
     </ul>
     </nav>
 
     <a class="logo"
-        href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
-        <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>
+        href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href']) ?>"
+        <?php echo Xml::expandAttributes(Linker::tooltipAndAccesskeyAttribs('p-logo')) ?>
     >
-        <img
-            src="<?php $this->text( 'logopath' ) ?>"
-            alt="<?php $this->text( 'sitename' ) ?>"
-        />
+        <img src="<?php $this->text('logopath') ?>" alt="<?php $this->text('sitename') ?>" />
     </a>
 
     <div class="searchform">
-    <form action="<?php $this->text( 'wgScript' ); ?>">
-        <input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
-        <?php echo $this->makeSearchInput( array( 'type' => 'text' ) ); ?>
-    </form>
+        <form action="<?php $this->text( 'wgScript' ); ?>">
+            <input type="hidden" name="title" value="<?php $this->text('searchtitle') ?>" />
+            <?php echo $this->makeSearchInput( array('type' => 'text') ); ?>
+        </form>
+        <i class="fa fa-search"></i>
     </div>
 
 </div>
@@ -59,65 +58,53 @@ $user_tools = array("history", "whatlinkshere", "permalink", "info", "specialpag
 $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions'], $this->getToolbox());
 ?>
 
-
-
 <div class="content_wrapper">
 <div class="tool-icons">
+    <?php if ($this->data['language_urls'] and count($this->data['language_urls']) > 0) { ?>
     <div class="tool-dropdown language-dropdown">
         <button href="#" class="fa fa-globe fa-lg"></button>
         <div style="display: none;">
-            <ul>
-                <li>Language 1</li>
-                <li>Language 2</li>
-                <li>Language 3</li>
-            </ul>
-        </div>
-    </div>
-
-
-
-    <div class="tool-dropdown options-dropdown">
-        <button href="#" class="fa fa-cog fa-lg"></button>
-        <div style="display: none;">
-            <ul>
-
-<div class="toolbox">
-    <p class="toolbox_title">Tools</p>
-
-    <?php foreach ($admin_tools as $tool) { ?>
-        <div class="toolbox_section">
-            <p><?= $tool["name"] ?></p>
-            <ul>
-            <?php
-            foreach ($tool["tools"] as $toolname) {
-                foreach ($all_tools as $key => $item ) {
-                    if ($key == $toolname) {
-                        echo $this->makeListItem($key, $item);
-                        break; // Just to be sure
-                    }
-                }
-            }
-            ?>
-            </ul>
-        </div>
-    <?php } ?>
-
-    <div class="toolbox_section">
-        <p>Language Links</p>
-        <ul>
-        <?php
-        if ($this->data['language_urls']) {
+            <ul> <?php
             foreach ($this->data['language_urls'] as $key => $item) {
                 echo $this->makeListItem($key, $item);
             }
-        }
-        ?>
-        </ul>
+            ?> </ul>
+        </div>
     </div>
-</div>
+    <?php } ?>
 
+    <div class="tool-dropdown options-dropdown">
+        <button href="#" class="fa fa-cog fa-lg"></button>
+        <div class="toolbox" style="display: none;">
+            <p class="toolbox_title">Tools</p>
 
-            </ul>
+            <?php foreach ($admin_tools as $tool) { ?>
+                <div class="toolbox_section">
+                    <p><?= $tool["name"] ?></p>
+                    <ul>
+                    <?php
+                    foreach ($tool["tools"] as $toolname) {
+                        foreach ($all_tools as $key => $item ) {
+                            if ($key == $toolname) {
+                                echo $this->makeListItem($key, $item);
+                            }
+                        }
+                    }
+                    ?>
+                    </ul>
+                </div>
+            <?php } ?>
+
+            <?php if ($this->data['language_urls'] and count($this->data['language_urls']) > 0) { ?>
+            <div class="toolbox_section">
+                <p>Language Links</p>
+                <ul><?php
+                foreach ($this->data['language_urls'] as $key => $item) {
+                    echo $this->makeListItem($key, $item);
+                }
+                ?></ul>
+            </div>
+            <?php } ?>
         </div>
     </div>
 </div>
