@@ -16,7 +16,7 @@ $this->html( 'headelement' ); ?>
 <div class="navigation-tools">
     <nav>
     <ul class="nav">
-        <li><a href="/wiki/Download" >Discover </a></li>
+        <li><a href="/wiki/Discover" >Discover </a></li>
         <li><a href="/wiki/Download" >Download </a></li>
         <li><a href="/wiki/FAQ"      >FAQ      </a></li>
         <li><a href="/wiki/Community">Community</a></li>
