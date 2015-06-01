@@ -17,10 +17,10 @@ $wgExtensionCredits['skin'][] = array(
     'name' => 'SuperTuxKart',
     'namemsg' => 'skinname-supertuxkart',
     'version' => '1.0',
-    'url' => 'https://www.mediawiki.org/wiki/Skin:SuperTuxKart',
-    'author' => '[Jean-Manuel Clemencon (Design), konstin (Programming)]',
+    'url' => 'https://github.com/konstin/STK-wiki-theme',
+    'author' => array('Jean-Manuel Clemencon (Design)', 'konstin (Programming)'),
     'descriptionmsg' => 'supertuxkart-desc',
-    'license' => 'CC-BY-SA',
+    'license' => '[TODO]',
 );
 
 $wgValidSkinNames['supertuxkart'] = 'SuperTuxKart';
