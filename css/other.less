@@ -5,7 +5,6 @@ body {
 
 .main-content-wrapper {
     padding: 30px;
-    margin: 0px @outermost-wrapper-margin;
     background-color: #ddd;
 }
 
@@ -23,37 +22,13 @@ body {
     display: none;
 }
 
-.tool-icons {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    z-index: 1;
 
-    div.tool-dropdown {
-        float: left;
-        postion: relative;
-
-        > button {
-            position: relative;
-            margin: 0px;
-            padding: 0px;
-            background-color: transparent;
-            border: none;
-            color: gray;
-        }
-
-        > div{
-            position: absolute;
-            left: -75px;
-            top: 30px;
-            margin: 0px;
-            width: 180px;
-
-            ul {
-                padding: 0px;
-                margin: 0px;
-                list-style: none;
-            }
-        }
+.size-dependend-margin {
+    margin: 0px 3%;
+    @media (max-width: 1000px) {
+        margin: 0px 20px;
+    }
+    @media (max-width: 800px) {
+        margin: 0px;
     }
 }

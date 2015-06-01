@@ -12,7 +12,7 @@ $this->html( 'headelement' ); ?>
 <?php /* - Header ---------------------------------------------------------------------------- */ ?>
 <div class="header_wrapper">
 <div class="header_color_wrapper_outer">
-<div class="header_color_wrapper_inner">
+<div class="header_color_wrapper_inner size-dependend-margin">
 <div class="navigation-tools">
     <nav>
     <ul class="nav">
@@ -45,7 +45,7 @@ $this->html( 'headelement' ); ?>
 
 
 <?php /* - Main Content ---------------------------------------------------------------------- */ ?>
-<div class="main-content-wrapper">
+<div class="main-content-wrapper size-dependend-margin">
 
 <?php /* - Toolbox --------------------------------------------------------------------------- */ ?>
 <?php
@@ -67,7 +67,7 @@ foreach ($all_tools as $key => $item ) {
 ?>
 
 <div class="content_wrapper">
-<div class="tool-icons">
+<div class="tooldropdown">
     <?php if ($this->data['language_urls'] and count($this->data['language_urls']) > 0) { ?>
     <div class="tool-dropdown language-dropdown">
         <button href="#" class="fa fa-globe fa-lg"></button>
@@ -137,7 +137,7 @@ foreach ($all_tools as $key => $item ) {
 
 
 <?php /* - Footer (copyright section, various menu etc) -------------------------------------- */ ?>
-<footer>
+<footer class="size-dependend-margin ">
 
 <div class="footer-links">
 <?php
