@@ -25,10 +25,10 @@ body {
 
 .size-dependend-margin {
     margin: 0px 3%;
-    @media (max-width: 1200px) {
+    @media (max-width: @screen-medium-res) {
         margin: 0px 20px;
     }
-    @media (max-width: 600px) {
+    @media (max-width: @screen-small-res) {
         margin: 0px 5px;
     }
 }
@@ -36,11 +36,13 @@ body {
 .size-dependend-padding {
      padding: 30px;
 
-     @media (max-width: 1200px) {
-        padding: 15px;
+     @media (max-width: @screen-medium-res) {
+        padding-left: 20px;
+        padding-right: 20px;
      }
-     @media (max-width: 600px) {
-        padding: 10px;     
+     @media (max-width: @screen-small-res) {
+        padding-left: 10px;
+        padding-right: 10px;     
      } 
 }
 

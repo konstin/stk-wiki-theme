@@ -69,7 +69,7 @@ foreach ($all_tools as $key => $item ) {
 <div class="tooldropdown">
     <?php if ($this->data['language_urls'] and count($this->data['language_urls']) > 0) { ?>
     <div class="tool-dropdown language-dropdown">
-        <button href="#" class="fa fa-globe fa-lg"></button>
+        <button href="#" class="fa fa-globe fa-lg toolbox-button"></button>
         <div style="display: none;">
             <ul> <?php
             foreach ($this->data['language_urls'] as $key => $item) {
@@ -155,7 +155,7 @@ $footer_section = array (
         array('Pictures', '/wiki/Pictures'),
         array('Posters', '/wiki/Posters')
     )),
-    array( 'heading' => 'Developement', 'entries' => array (
+    array( 'heading' => 'Development', 'entries' => array (
         array('Modding', '/wiki/Track_Maker%27s_Guide'),
         array('GitHub', 'https://github.com/supertuxkart/stk-code'),
         array('Doxygen', 'http://supertuxkart.sourceforge.net/doxygen')

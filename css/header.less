@@ -2,6 +2,14 @@
     background-image: url('images/header.jpg');
     position: relative;
     height: 130px;
+    
+    @media (max-width: @screen-medium-res){
+        height: 100px;
+    }
+    
+    @media (max-width: @screen-small-res){
+        height: 80px;
+    }
 
     .header_color_wrapper_outer {
         width: 100%;
@@ -46,6 +54,22 @@
         position: absolute;
         left: -90px;
         bottom: -40px;
+        
+        @media (max-width: @screen-medium-res) {
+            left: -20px;
+            bottom: -30px;
+            img {
+                width: 75%;
+            }
+        }
+        
+        @media (max-width: @screen-small-res) {
+            left: -10px;
+            bottom: -20px;
+            img {
+                width: 60%;
+            }
+        }
     }
 }
 

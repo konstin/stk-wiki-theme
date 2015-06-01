@@ -1,3 +1,10 @@
+/* we likely don't need the toolbox with the mobile version */
+.tooldropdown{
+    @media (max-width: @screen-small-res) {
+        display: none;
+    }
+}
+
 .toolbox {
     background-color: #aaa;
     color: #222;
