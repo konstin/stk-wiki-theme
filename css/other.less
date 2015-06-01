@@ -4,7 +4,7 @@ body {
 }
 
 .main-content-wrapper {
-    padding: 30px;
+    .size-dependend-padding;
     background-color: #ddd;
     .size-dependend-margin;
 }
@@ -25,10 +25,22 @@ body {
 
 .size-dependend-margin {
     margin: 0px 3%;
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
         margin: 0px 20px;
     }
-    @media (max-width: 800px) {
-        margin: 0px;
+    @media (max-width: 600px) {
+        margin: 0px 5px;
     }
 }
+
+.size-dependend-padding {
+     padding: 30px;
+
+     @media (max-width: 1200px) {
+        padding: 15px;
+     }
+     @media (max-width: 600px) {
+        padding: 10px;     
+     } 
+}
+
