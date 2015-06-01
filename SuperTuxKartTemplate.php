@@ -4,10 +4,9 @@ class SuperTuxKartTemplate extends BaseTemplate {
      * This is function is used to create the entire page
      */
     public function execute() {
-$this->html( 'headelement' ); ?>
+$this->html('headelement'); ?>
 
 <div class="outerbox"> <!-- currently unused -->
-
 
 <?php /* - Header ---------------------------------------------------------------------------- */ ?>
 <div class="header_wrapper">
@@ -31,9 +30,9 @@ $this->html( 'headelement' ); ?>
     </a>
 
     <div class="searchform">
-        <form action="<?php $this->text( 'wgScript' ); ?>">
+        <form action="<?php $this->text('wgScript'); ?>">
             <input type="hidden" name="title" value="<?php $this->text('searchtitle') ?>" />
-            <?php echo $this->makeSearchInput( array('type' => 'text') ); ?>
+            <?php echo $this->makeSearchInput(array('type' => 'text')); ?>
         </form>
         <i class="fa fa-search"></i>
     </div>
