@@ -31,7 +31,6 @@
     margin: 0 auto;
 
     > nav {
-        position: absolute;
         bottom: 0px;
         max-width: @max-content-width - 300px;
         margin-left: 120px;
@@ -54,21 +53,22 @@
         position: absolute;
         left: -90px;
         bottom: -40px;
+        width: @logo-width;
+
+        > img {
+            width: 100%;
+        }
 
         @media (max-width: @screen-medium-res) {
             left: -20px;
             bottom: -30px;
-            img {
-                width: 75%;
-            }
+            width: @logo-width * 0.75;
         }
 
         @media (max-width: @screen-small-res) {
-            left: -10px;
+            left: 0px;
             bottom: -20px;
-            img {
-                width: 60%;
-            }
+            width: @logo-width * 0.6;
         }
     }
 }

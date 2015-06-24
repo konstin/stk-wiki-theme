@@ -11,6 +11,7 @@ ul.nav {
     padding: 0px;
     list-style: none;
     display: inline-block;
+    position: absolute;
 
     a {
         color: white;
@@ -47,3 +48,37 @@ ul.nav {
         top: 50%;
     }
 }
+
+input[type=checkbox]{
+    display: none;
+}
+
+.toggle-mobile-navbar {
+    display: none;
+}
+
+input[type=checkbox]:checked ~ .nav{
+    display: block;
+}
+
+@media screen and (max-width: 800px){
+    ul.nav {
+        position: absolute;
+        display: none;
+    }
+
+    ul.nav li {
+        margin-bottom: 1px;
+    }
+
+    ul.nav li, ul.nav li a {
+        width: 100%;
+    }
+
+    .toggle-mobile-navbar {
+        display: block;
+        padding: 15px;
+        color: #fff;
+    }
+}
+
