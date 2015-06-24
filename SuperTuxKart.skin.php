@@ -13,6 +13,8 @@ class SkinSuperTuxKart extends SkinTemplate {
     public function initPage(OutputPage $out) {
         parent::initPage($out);
         $out->addModules('skins.supertuxkart.dropdown.js');
+        $out->addHeadItem('sclaling1', '<meta name="viewport" content="user-scalable = yes">');
+        $out->addHeadItem('sclaling1', '<meta name="viewport" content="width=device-width, initial-scale=1.0">');
     }
 
     /** Add CSS declared in SuperTuxKart.php through $wgResourceModules here **/
