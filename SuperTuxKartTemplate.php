@@ -25,8 +25,8 @@ $this->html('headelement'); ?>
                 <form action="<?php $this->text('wgScript'); ?>">
                     <input type="hidden" name="title" value="<?php $this->text('searchtitle') ?>" />
                     <?php echo $this->makeSearchInput(array('type' => 'text')); ?>
+                    <button class="fa fa-search" role="submit"></button>
                 </form>
-                <i class="fa fa-search"></i>
             </li>
         </ul>
     </nav>

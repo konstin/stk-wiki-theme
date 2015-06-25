@@ -41,11 +41,11 @@ ul.nav {
     }
 
     li a:first-child:nth-last-child(2):before {
-        content: "";
         position: absolute;
+        top: 50%;
         height: 0px;
         width: 0px;
-        top: 50%;
+        content: '';
     }
 
     li.searchform {
@@ -56,10 +56,14 @@ ul.nav {
         border-radius: 4px;
         background-color: #ADADAD;
 
-        i.fa-search {
+        button.fa-search {
             position: absolute;
             right: 8px;
             top: 3px;
+            background: none;
+            margin: 0px;
+            padding: 0px;
+            border: none;
             color: #4D4D4D;
         }
 
@@ -96,6 +100,8 @@ input[type=checkbox]:checked ~ .nav{
 @media screen and (max-width: @screen-medium-res){
     ul.nav {
         position: absolute;
+        left: 50%;
+        transform: translate(-50%, @nav-bar-height);
         display: none;
         width: 210px;
         background-color: #40A000;
@@ -105,12 +111,33 @@ input[type=checkbox]:checked ~ .nav{
             width: 100%;
         }
 
+        li.searchform {
+            width: 206px;
+            height: 36px;
+            margin: 2px;
+            padding: 0px;
+            border-radius: 0px;
+
+            input {
+                width: 180px;
+                height: 36px;
+                font-size: 16px;
+            }
+
+            i.fa-search {
+                top: 8px;
+            }
+        }
+
         li:before {
             content: '';
         }
     }
 
     .toggle-mobile-navbar {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0px);
         display: flex;
         align-items: center;
         color: #fff;
