@@ -28,7 +28,7 @@ ul.nav {
         position: relative;
         float: left;
         height: 26px;
-        margin: 12px 0px;
+        padding: 12px 0px;
     }
 
     li:before {
@@ -49,6 +49,8 @@ ul.nav {
     }
 }
 
+/* mobile navbar */
+
 input[type=checkbox]{
     display: none;
 }
@@ -61,24 +63,31 @@ input[type=checkbox]:checked ~ .nav{
     display: block;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: @screen-medium-res){
     ul.nav {
         position: absolute;
         display: none;
-    }
+        width: 200px;
+        background-color: #40A000;
 
-    ul.nav li {
-        margin-bottom: 1px;
-    }
+        li {
+            width: 100%;
 
-    ul.nav li, ul.nav li a {
-        width: 100%;
+            a {
+                width: 100%;
+            }
+        }
+
+        li:before {
+            content: '';
+        }
     }
 
     .toggle-mobile-navbar {
-        display: block;
-        padding: 15px;
+        display: flex;
+        align-items: center;
         color: #fff;
+        height: 100%;
     }
 }
 

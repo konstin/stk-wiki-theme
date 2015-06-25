@@ -14,7 +14,7 @@ $this->html('headelement'); ?>
 <div class="header_color_wrapper_inner size-dependend-margin">
 <div class="navigation-tools">
     <nav>
-    <label for="toggle-mobile-navbar" class="toggle-mobile-navbar"><i class="fa fa-bars"></i> Show Menu</label>
+    <label for="toggle-mobile-navbar" class="toggle-mobile-navbar"><i class="fa fa-bars" style="margin-right: 5px"></i>Menu</label>
     <input type="checkbox" id="toggle-mobile-navbar" role="button">
     <ul class="nav">
         <li><a href="/wiki/Discover" >Discover </a></li>

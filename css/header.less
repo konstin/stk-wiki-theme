@@ -3,7 +3,7 @@
     position: relative;
     height: 130px;
 
-    @media (max-width: @screen-medium-res){
+    @media (max-width: @screen-high-res){
         height: 100px;
     }
 
@@ -34,6 +34,9 @@
         bottom: 0px;
         max-width: @max-content-width - 300px;
         margin-left: 120px;
+        @media screen and (min-width: @screen-small-res) and  (max-width: @screen-medium-res) {
+            margin-left: 130px;
+        }
     }
 
     > .searchform {
@@ -59,7 +62,7 @@
             width: 100%;
         }
 
-        @media (max-width: @screen-medium-res) {
+        @media (max-width: @screen-high-res) {
             left: -20px;
             bottom: -30px;
             width: @logo-width * 0.75;
