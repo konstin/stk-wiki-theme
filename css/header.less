@@ -30,29 +30,16 @@
     max-width: @max-content-width;
     margin: 0 auto;
 
-    > nav {
+    nav {
         bottom: 0px;
-        max-width: @max-content-width - 300px;
+        //max-width: @max-content-width - 300px;
         margin-left: 120px;
         @media screen and (min-width: @screen-small-res) and  (max-width: @screen-medium-res) {
             margin-left: 130px;
         }
     }
 
-    > .searchform {
-        position: absolute;
-        right: 0px;
-        bottom: 0px;
-
-        i.fa-search {
-            position: absolute;
-            right: 8px;
-            top: 3px;
-            color: #4D4D4D;
-        }
-    }
-
-    > .logo {
+    .logo {
         position: absolute;
         left: -90px;
         bottom: -40px;
@@ -85,24 +72,5 @@
 
     a {
         color: #3EA615;
-    }
-}
-
-.searchform {
-    height: 24px;
-    width: @searchform-width;
-    margin: 13px;
-    padding: 0px 5px;
-    border-radius: 4px;
-    background-color: #ADADAD;
-
-    input {
-        height: 20px;
-        width: @searchform-width - 20px;
-        /* clean defaults */
-        background: transparent;
-        border: none;
-        padding: 0px;
-        margin: 0px;
     }
 }

@@ -14,14 +14,21 @@ $this->html('headelement'); ?>
 <div class="header_color_wrapper_inner size-dependend-margin">
 <div class="navigation-tools">
     <nav>
-    <label for="toggle-mobile-navbar" class="toggle-mobile-navbar"><i class="fa fa-bars" style="margin-right: 5px"></i>Menu</label>
-    <input type="checkbox" id="toggle-mobile-navbar" role="button">
-    <ul class="nav">
-        <li><a href="/wiki/Discover" >Discover </a></li>
-        <li><a href="/wiki/Download" >Download </a></li>
-        <li><a href="/wiki/FAQ"      >FAQ      </a></li>
-        <li><a href="/wiki/Community">Community</a></li>
-    </ul>
+        <label for="toggle-mobile-navbar" class="toggle-mobile-navbar"><i class="fa fa-bars" style="margin-right: 5px"></i>Menu</label>
+        <input type="checkbox" id="toggle-mobile-navbar" role="button">
+        <ul class="nav">
+            <li><a href="/wiki/Discover" >Discover </a></li>
+            <li><a href="/wiki/Download" >Download </a></li>
+            <li><a href="/wiki/FAQ"      >FAQ      </a></li>
+            <li><a href="/wiki/Community">Community</a></li>
+            <li class="searchform">
+                <form action="<?php $this->text('wgScript'); ?>">
+                    <input type="hidden" name="title" value="<?php $this->text('searchtitle') ?>" />
+                    <?php echo $this->makeSearchInput(array('type' => 'text')); ?>
+                </form>
+                <i class="fa fa-search"></i>
+            </li>
+        </ul>
     </nav>
 
     <a class="logo"
@@ -31,13 +38,6 @@ $this->html('headelement'); ?>
         <img src="<?php $this->text('logopath') ?>" alt="<?php $this->text('sitename') ?>" />
     </a>
 
-    <div class="searchform">
-        <form action="<?php $this->text('wgScript'); ?>">
-            <input type="hidden" name="title" value="<?php $this->text('searchtitle') ?>" />
-            <?php echo $this->makeSearchInput(array('type' => 'text')); ?>
-        </form>
-        <i class="fa fa-search"></i>
-    </div>
 
 </div>
 </div>

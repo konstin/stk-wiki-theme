@@ -11,7 +11,7 @@ ul.nav {
     padding: 0px;
     list-style: none;
     display: inline-block;
-    position: absolute;
+    width: 100%;
 
     a {
         color: white;
@@ -47,15 +47,45 @@ ul.nav {
         width: 0px;
         top: 50%;
     }
+
+    li.searchform {
+        float: right;
+        width: @searchform-width;
+        margin: 12px;
+        padding: 0px 5px;
+        border-radius: 4px;
+        background-color: #ADADAD;
+
+        i.fa-search {
+            position: absolute;
+            right: 8px;
+            top: 3px;
+            color: #4D4D4D;
+        }
+
+        input {
+            height: 20px;
+            width: @searchform-width - 25px;
+            /* clean defaults */
+            background: transparent;
+            border: none;
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+
+    li.searchform:before {
+        content: '';
+    }
 }
 
 /* mobile navbar */
 
-input[type=checkbox]{
+.toggle-mobile-navbar {
     display: none;
 }
 
-.toggle-mobile-navbar {
+input[type=checkbox]{
     display: none;
 }
 
@@ -67,16 +97,12 @@ input[type=checkbox]:checked ~ .nav{
     ul.nav {
         position: absolute;
         display: none;
-        width: 200px;
+        width: 210px;
         background-color: #40A000;
         z-index: 1;
 
         li {
             width: 100%;
-
-            a {
-                width: 100%;
-            }
         }
 
         li:before {
