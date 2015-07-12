@@ -4,7 +4,26 @@ class SuperTuxKartTemplate extends BaseTemplate {
      * This is function is used to create the entire page
      */
     public function execute() {
-$this->html('headelement'); ?>
+
+// Toolbox
+$admin_tools = array( array("name" => "Actions", "tools" => array("edit", "move", "protect", "delete", "watch")),
+                      array("name" => "Page",    "tools" => array("history", "whatlinkshere", "permalink", "info")),
+                      array("name" => "Me",      "tools" => array("specialpages", "preferences", "watchlist", "mycontris", "logout")));
+
+$user_tools = array("history", "whatlinkshere", "permalink", "info", "specialpages", "login");
+
+$all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions'], $this->getToolbox());
+
+// Even goole didn't know a better to do that ...
+$logged_in = false;
+foreach ($all_tools as $key => $item ) {
+    if ($key == "logout") {
+        $logged_in = true;
+    }
+}
+
+$this->html('headelement');
+?>
 
 <div class="outerbox"> <!-- currently unused -->
 
@@ -22,6 +41,59 @@ $this->html('headelement'); ?>
             <li><a href="/wiki/FAQ"      >FAQ      </a></li>
             <li><a href="/wiki/Community">Community</a></li>
             <li class="searchform">
+                <div class="tooldropdown">
+                    <?php if ($this->data['language_urls'] and count($this->data['language_urls']) > 0) { ?>
+                    <div class="tool-dropdown language-dropdown">
+                    <button href="#" class="fa fa-globe fa-lg toolbox-button"></button>
+                    <div style="display: none;">
+                        <ul> <?php
+                        foreach ($this->data['language_urls'] as $key => $item) {
+                        echo $this->makeListItem($key, $item);
+                        }
+                        ?> </ul>
+                    </div>
+                    </div>
+                    <?php } ?>
+
+                    <div class="tool-dropdown options-dropdown">
+                    <button href="#" class="fa fa-cog fa-lg"></button>
+                    <div class="toolbox" style="display: none;">
+                        <p class="toolbox_title">Tools</p>
+
+                        <?php if ($logged_in) {
+                         foreach ($admin_tools as $tool) { ?>
+                            <div class="toolbox_section">
+                            <p><?= $tool["name"] ?></p>
+                            <ul>
+                            <?php
+                            foreach ($tool["tools"] as $toolname) {
+                                foreach ($all_tools as $key => $item ) {
+                                if ($key == $toolname) {
+                                    echo $this->makeListItem($key, $item);
+                                }
+                                }
+                            }
+                            ?>
+                            </ul>
+                            </div>
+                        <?php }
+                        } else { ?>
+                        <ul>
+                        <?php
+                        foreach ($user_tools as $toolname) {
+                            foreach ($all_tools as $key => $item ) {
+                            if ($key == $toolname) {
+                                echo $this->makeListItem($key, $item);
+                            }
+                            }
+                        }
+                        ?>
+                        </ul>
+                        <?php } ?>
+                    </div>
+                    </div>
+                </div>
+
                 <form action="<?php $this->text('wgScript'); ?>">
                     <input type="hidden" name="title" value="<?php $this->text('searchtitle') ?>" />
                     <?php echo $this->makeSearchInput(array('type' => 'text')); ?>
@@ -48,79 +120,7 @@ $this->html('headelement'); ?>
 <?php /* - Main Content ---------------------------------------------------------------------- */ ?>
 <div class="main-content-wrapper size-dependend-margin">
 
-<?php /* - Toolbox --------------------------------------------------------------------------- */ ?>
-<?php
-$admin_tools = array( array("name" => "Actions", "tools" => array("edit", "move", "protect", "delete", "watch")),
-                      array("name" => "Page",    "tools" => array("history", "whatlinkshere", "permalink", "info")),
-                      array("name" => "Me",      "tools" => array("specialpages", "preferences", "watchlist", "mycontris", "logout")));
-
-$user_tools = array("history", "whatlinkshere", "permalink", "info", "specialpages", "login");
-
-$all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions'], $this->getToolbox());
-
-// Even goole didn't know a better to do that ...
-$logged_in = false;
-foreach ($all_tools as $key => $item ) {
-    if ($key == "logout") {
-        $logged_in = true;
-    }
-}
-?>
-
 <div class="content_wrapper">
-<div class="tooldropdown">
-    <?php if ($this->data['language_urls'] and count($this->data['language_urls']) > 0) { ?>
-    <div class="tool-dropdown language-dropdown">
-        <button href="#" class="fa fa-globe fa-lg toolbox-button"></button>
-        <div style="display: none;">
-            <ul> <?php
-            foreach ($this->data['language_urls'] as $key => $item) {
-                echo $this->makeListItem($key, $item);
-            }
-            ?> </ul>
-        </div>
-    </div>
-    <?php } ?>
-
-    <div class="tool-dropdown options-dropdown">
-        <button href="#" class="fa fa-cog fa-lg"></button>
-        <div class="toolbox" style="display: none;">
-            <p class="toolbox_title">Tools</p>
-
-            <?php if ($logged_in) {
-                 foreach ($admin_tools as $tool) { ?>
-                    <div class="toolbox_section">
-                        <p><?= $tool["name"] ?></p>
-                        <ul>
-                        <?php
-                        foreach ($tool["tools"] as $toolname) {
-                            foreach ($all_tools as $key => $item ) {
-                                if ($key == $toolname) {
-                                    echo $this->makeListItem($key, $item);
-                                }
-                            }
-                        }
-                        ?>
-                        </ul>
-                    </div>
-                <?php }
-            } else { ?>
-                <ul>
-                <?php
-                foreach ($user_tools as $toolname) {
-                    foreach ($all_tools as $key => $item ) {
-                        if ($key == $toolname) {
-                            echo $this->makeListItem($key, $item);
-                        }
-                    }
-                }
-                ?>
-                </ul>
-            <?php } ?>
-        </div>
-    </div>
-</div>
-
 
 <?php /* Main Content ----------------------------------------------------------------------- */ ?>
 
