@@ -42,6 +42,7 @@ $wgResourceModules['skins.supertuxkart'] = array(
 $wgResourceModules['skins.supertuxkart.dropdown.js'] = array(
     'scripts' => array(
         'js/dropdown.js',
+        'js/responsive-youtube-video-size.js',
     ),
 
     'remoteSkinPath' => 'SuperTuxKart',
