@@ -1,6 +1,10 @@
 body {
     background-image: url('images/background.jpg);
     background-attachment: fixed;
+    
+    @media (max-width: @screen-high-res) {
+        background-image: url('images/background-small.jpg);
+     }
 }
 
 .main-content-wrapper {
