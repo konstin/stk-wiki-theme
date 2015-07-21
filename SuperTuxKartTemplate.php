@@ -35,7 +35,7 @@ $this->html('headelement');
     <nav>
         <label for="toggle-mobile-navbar" class="toggle-mobile-navbar"><i class="fa fa-bars" style="margin-right: 5px"></i>Menu</label>
         <input type="checkbox" id="toggle-mobile-navbar" role="button">
-        <ul class="nav">
+        <ul class="nav noselect">
             <li><a href="/wiki/Discover" >Discover </a></li>
             <li><a href="/wiki/Download" >Download </a></li>
             <li><a href="/wiki/FAQ"      >FAQ      </a></li>
@@ -103,7 +103,7 @@ $this->html('headelement');
         </ul>
     </nav>
 
-    <a class="logo"
+    <a class="logo noselect"
         href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href']) ?>"
         <?php echo Xml::expandAttributes(Linker::tooltipAndAccesskeyAttribs('p-logo')) ?>
     >

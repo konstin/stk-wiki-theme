@@ -2,13 +2,16 @@
     background-image: url('images/header.jpg');
     position: relative;
     height: 130px;
+    background-size: cover;
 
     @media (max-width: @screen-high-res){
         height: 100px;
+        background-image: url('images/header-small.jpg');
     }
 
     @media (max-width: @screen-small-res){
         height: 80px;
+        background-image: url('images/header-small.jpg');
     }
 
     .header_color_wrapper_outer {
