@@ -35,8 +35,11 @@
 
     nav {
         bottom: 0px;
-        //max-width: @max-content-width - 300px;
         margin-left: 120px;
+        display: block;
+        height: 100%;
+
+        max-width: @max-content-width;
         @media screen and (min-width: @screen-small-res) and  (max-width: @screen-medium-res) {
             margin-left: 130px;
         }
@@ -63,17 +66,5 @@
             bottom: -20px;
             width: @logo-width * 0.6;
         }
-    }
-}
-
-/** currently unused **/
-.login {
-    float: right;
-    font-size: 12px;
-    margin-top: 3px;
-    margin-right: 8px;
-
-    a {
-        color: #3EA615;
     }
 }
