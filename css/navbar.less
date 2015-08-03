@@ -45,7 +45,7 @@
 
 
 /* Searchbox at the top right */
-ul.nav > li.searchform {
+.nav > li.searchform {
     float: right;
     width: @searchform-width;
     margin: 12px;
@@ -124,28 +124,23 @@ input[type=checkbox]:checked ~ .nav {
         height: 100%;
     }
 
-    .nav > li.searchform {
+    ul.nav > li.searchform {
         width: 190px;
         height: 36px;
         margin: 10px;
         padding: 0px;
         border-radius: 4px;
 
-        form {
-            margin: 4px;
-        }
-
         input {
-            width: 145px;
             height: 36px;
             margin-left: 5px;
             font-size: 16px;
         }
 
         button.fa-search {
-            top: 0px;
             right: 0px;
-            padding: 8px;
+            top: 3px;
+            padding: 5px;
         }
     }
 }
