@@ -12,6 +12,17 @@ $user_tools = array("history", "whatlinkshere", "permalink", "info", "specialpag
 
 $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions'], $this->getToolbox());
 
+// For later...
+/**
+<?php if ($this->data['language_urls'] and count($this->data['language_urls']) > 0) { ?>
+    <ul>
+    <?php foreach ($this->data['language_urls'] as $key => $item) {
+        echo $this->makeListItem($key, $item);
+    } ?>
+    </ul>
+<?php } ?>
+*/
+
 // Even goole didn't know a better to do that ...
 $logged_in = false;
 foreach ($all_tools as $key => $item ) {
@@ -39,31 +50,16 @@ $this->html('headelement');
             <li><a href="/wiki/FAQ"      >FAQ      </a></li>
             <li><a href="/wiki/Community">Community</a></li>
             <li class="searchform">
-                <div class="tooldropdown">
-                    <?php if ($this->data['language_urls'] and count($this->data['language_urls']) > 0) { ?>
-                        <div class="tool-dropdown language-dropdown">
-                            <div class="dropdown-target">
-                                <div style="display: none;">
-                                    <ul>
-                                    <?php foreach ($this->data['language_urls'] as $key => $item) {
-                                        echo $this->makeListItem($key, $item);
-                                    } ?>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    <?php } ?>
-
-                    <div class="tool-dropdown">
-                    <label for="tool-dropdown-gear" class="tool-dropdown-gear-label"><i class="fa fa-cog fa-lg"></i></label>
-                    <input type="checkbox" role="button" id="tool-dropdown-gear" class="dropdown-trigger"></button>
-                    <div class="toolbox dropdown-target">
-                        <p class="toolbox_title">Tools</p>
+                <div class="toolbox-container">
+                    <label for="toolbox-gear" class="toolbox-gear-label"><i class="fa fa-cog fa-lg"></i></label>
+                    <input type="checkbox" role="button" id="toolbox-gear" class="dropdown-trigger"></button>
+                    <div class="toolbox dropdown-target"> <!-- the actual toolbox starts here -->
+                        <p class="toolbox-title">Tools</p>
 
                         <?php
                         if ($logged_in) {
                             foreach ($admin_tools as $tool) { ?>
-                                <div class="toolbox_section">
+                                <div class="toolbox-section">
                                 <p><?= $tool["name"] ?></p>
                                 <ul>
                                 <?php
@@ -92,8 +88,8 @@ $this->html('headelement');
                             </ul>
                         <?php
                         } ?>
-                    </div>
-                    </div>
+
+                    </div> <!-- the actual toolbox ends here -->
                 </div>
 
                 <form action="<?php $this->text('wgScript'); ?>">

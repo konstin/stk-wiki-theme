@@ -1,8 +1,25 @@
+
+.toolbox-container {
+    position: absolute;
+    left: -35px;
+    top: 0px;
+    z-index: 1;
+
+    .toolbox-gear-label {
+        color: @dark-grey;
+    }
+
+    @media screen and (max-width: @screen-medium-res){
+        display: none;
+    }
+}
+
 .toolbox {
+    position: absolute;
+    left: -80px;
+    top: 30px;
+    width: 180px;
     background-color: #aaa;
-    color: #222;
-    float: left;
-    width: 100%;
 
     p {
         margin: 0px;
@@ -12,27 +29,32 @@
         color: #111;
     }
 
-    ul.public-tools {
-        border: 2px solid grey;
-        border-top: none;
-    }
+    ul {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
 
-    li {
-        list-style-type: none;
-        padding: 2px;
-        padding-left: 10px;
-        padding-right: 20px;
-
-        &:nth-child(even) {
-            background: #ddd;
+        &.public-tools {
+            border: 2px solid grey;
+            border-top: none;
         }
 
-        &:hover {
-            background-color: #00be50;
+        li {
+            padding: 2px;
+            padding-left: 10px;
+            padding-right: 20px;
+
+            &:nth-child(even) {
+                background: #ddd;
+            }
+
+            &:hover {
+                background-color: #00be50;
+            }
         }
     }
 
-    .toolbox_title {
+    .toolbox-title {
         padding: 5px;
         background-color: #222;
         text-align: center;
@@ -40,21 +62,10 @@
         font-weight: bold;
     }
 
-    .toolbox_section {
+    .toolbox-section {
         background-color: #ccc;
-        margin: 3px;
-        margin-bottom: 10px;
+        margin: 3px 3px 5px;
         font-size: 14px;
-
-        ul {
-            padding: 0px;
-            margin: 0px;
-
-            a {
-                width: 100%;
-                heigth: 100%;
-            }
-        }
 
         p {
             padding: 5px;
