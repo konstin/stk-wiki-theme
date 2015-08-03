@@ -1,5 +1,5 @@
 /* inspired by http: //css-tricks.com/targetting-menu-elements-submenus-navigation-bar/ */
-ul.nav {
+.nav {
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -13,6 +13,15 @@ ul.nav {
         height: 26px;
         padding: 12px 0px;
 
+        &:before {
+            content: '|';
+            color: white;
+         }
+
+        &:first-child:before {
+           content: '';
+        }
+
         > a {
             color: white;
             margin: 0px 10px;
@@ -23,60 +32,54 @@ ul.nav {
             text-decoration: none;
             color: orange;
         }
-    }
 
-    > li:before {
-        content: '|';
-        color: white;
-     }
-
-    > li:first-child:before {
-       content: '';
-    }
-
-    > li a:first-child:nth-last-child(2):before {
-        position: absolute;
-        top: 50%;
-        height: 0px;
-        width: 0px;
-        content: '';
-    }
-
-    > li.searchform {
-        float: right;
-        width: @searchform-width;
-        margin: 12px;
-        margin-left: 35px; // For the tools-icon
-        padding: 0px 5px;
-        border-radius: 4px;
-        background-color: #ADADAD;
-
-        button.fa-search {
+        a:first-child:nth-last-child(2):before {
             position: absolute;
-            right: 8px;
-            top: 3px;
-            background: none;
-            margin: 0px;
-            padding: 0px;
-            border: none;
-            color: #4D4D4D;
-        }
-
-        input {
-            height: 20px;
-            width: @searchform-width - 25px;
-            /* clean defaults */
-            background: transparent;
-            border: none;
-            padding: 0px;
-            margin: 0px;
+            top: 50%;
+            height: 0px;
+            width: 0px;
+            content: '';
         }
     }
+}
 
-    > li.searchform:before {
+
+/* Searchbox at the top right */
+ul.nav > li.searchform {
+    float: right;
+    width: @searchform-width;
+    margin: 12px;
+    margin-left: 35px; // For the tools-icon
+    padding: 0px 5px;
+    border-radius: 4px;
+    background-color: #ADADAD;
+
+    button.fa-search {
+        position: absolute;
+        right: 8px;
+        top: 3px;
+        background: none;
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        color: #4D4D4D;
+    }
+
+    input {
+        height: 20px;
+        width: @searchform-width - 25px;
+        /* clean defaults */
+        background: transparent;
+        border: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    &:before {
         content: '';
     }
 }
+
 
 /* mobile navbar */
 
@@ -84,16 +87,16 @@ ul.nav {
     display: none;
 }
 
-input[type=checkbox]{
+input[type=checkbox] {
     display: none;
 }
 
-input[type=checkbox]:checked ~ .nav{
+input[type=checkbox]:checked ~ .nav {
     display: block;
 }
 
-@media screen and (max-width: @screen-medium-res){
-    ul.nav {
+@media screen and (max-width: @screen-medium-res) {
+    .nav {
         position: absolute;
         left: 50%;
         transform: translate(-50%, @nav-bar-height);
@@ -104,31 +107,10 @@ input[type=checkbox]:checked ~ .nav{
 
         > li {
             width: 100%;
-        }
 
-        > li.searchform {
-            width: 190px;
-            height: 36px;
-            margin: 10px;
-            padding: 0px;
-            border-radius: 4px;
-
-            input {
-                width: 145px;
-                height: 36px;
-                margin-left: 5px;
-                font-size: 16px;
+            &:before {
+                content: '';
             }
-
-            button.fa-search {
-                top: 0px;
-                right: 0px;
-                padding: 8px;
-            }
-        }
-
-        > li:before {
-            content: '';
         }
     }
 
@@ -138,8 +120,33 @@ input[type=checkbox]:checked ~ .nav{
         transform: translate(-50%, 0px);
         display: flex;
         align-items: center;
-        color: #fff;
+        color: white;
         height: 100%;
+    }
+
+    .nav > li.searchform {
+        width: 190px;
+        height: 36px;
+        margin: 10px;
+        padding: 0px;
+        border-radius: 4px;
+
+        form {
+            margin: 4px;
+        }
+
+        input {
+            width: 145px;
+            height: 36px;
+            margin-left: 5px;
+            font-size: 16px;
+        }
+
+        button.fa-search {
+            top: 0px;
+            right: 0px;
+            padding: 8px;
+        }
     }
 }
 
