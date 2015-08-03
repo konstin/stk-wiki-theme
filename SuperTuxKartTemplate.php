@@ -4,8 +4,6 @@ class SuperTuxKartTemplate extends BaseTemplate {
      * This is function is used to create the entire page
      */
     public function execute() {
-
-// Toolbox
 $admin_tools = array( array("name" => "Actions", "tools" => array("edit", "move", "protect", "delete", "watch")),
                       array("name" => "Page",    "tools" => array("history", "whatlinkshere", "permalink", "info")),
                       array("name" => "Me",      "tools" => array("specialpages", "preferences", "watchlist", "mycontris", "logout")));
@@ -34,8 +32,8 @@ $this->html('headelement');
 <div class="navigation-tools">
     <nav>
         <label for="toggle-mobile-navbar" class="toggle-mobile-navbar"><i class="fa fa-bars" style="margin-right: 5px"></i>Menu</label>
-        <input type="checkbox" id="toggle-mobile-navbar" role="button">
-        <ul class="nav noselect">
+        <input type="checkbox" role="button" id="toggle-mobile-navbar" class="dropdown-trigger">
+        <ul class="nav noselect dropdown-target">
             <li><a href="/wiki/Discover" >Discover </a></li>
             <li><a href="/wiki/Download" >Download </a></li>
             <li><a href="/wiki/FAQ"      >FAQ      </a></li>
@@ -43,30 +41,47 @@ $this->html('headelement');
             <li class="searchform">
                 <div class="tooldropdown">
                     <?php if ($this->data['language_urls'] and count($this->data['language_urls']) > 0) { ?>
-                    <div class="tool-dropdown language-dropdown">
-                    <button href="#" class="fa fa-globe fa-lg toolbox-button"></button>
-                    <div style="display: none;">
-                        <ul> <?php
-                        foreach ($this->data['language_urls'] as $key => $item) {
-                        echo $this->makeListItem($key, $item);
-                        }
-                        ?> </ul>
-                    </div>
-                    </div>
+                        <div class="tool-dropdown language-dropdown">
+                            <div class="dropdown-target">
+                                <div style="display: none;">
+                                    <ul>
+                                    <?php foreach ($this->data['language_urls'] as $key => $item) {
+                                        echo $this->makeListItem($key, $item);
+                                    } ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     <?php } ?>
 
-                    <div class="tool-dropdown options-dropdown">
-                    <button href="#" class="fa fa-cog fa-lg"></button>
-                    <div class="toolbox" style="display: none;">
+                    <div class="tool-dropdown">
+                    <label for="tool-dropdown-gear" class="tool-dropdown-gear-label"><i class="fa fa-cog fa-lg"></i></label>
+                    <input type="checkbox" role="button" id="tool-dropdown-gear" class="dropdown-trigger"></button>
+                    <div class="toolbox dropdown-target">
                         <p class="toolbox_title">Tools</p>
 
-                        <?php if ($logged_in) {
-                         foreach ($admin_tools as $tool) { ?>
-                            <div class="toolbox_section">
-                            <p><?= $tool["name"] ?></p>
-                            <ul>
+                        <?php
+                        if ($logged_in) {
+                            foreach ($admin_tools as $tool) { ?>
+                                <div class="toolbox_section">
+                                <p><?= $tool["name"] ?></p>
+                                <ul>
+                                <?php
+                                foreach ($tool["tools"] as $toolname) {
+                                    foreach ($all_tools as $key => $item ) {
+                                        if ($key == $toolname) {
+                                            echo $this->makeListItem($key, $item);
+                                        }
+                                    }
+                                }
+                                ?>
+                                </ul>
+                                </div>
+                            <?php }
+                        } else { ?>
+                            <ul class="public-tools">
                             <?php
-                            foreach ($tool["tools"] as $toolname) {
+                            foreach ($user_tools as $toolname) {
                                 foreach ($all_tools as $key => $item ) {
                                     if ($key == $toolname) {
                                         echo $this->makeListItem($key, $item);
@@ -75,21 +90,8 @@ $this->html('headelement');
                             }
                             ?>
                             </ul>
-                            </div>
-                        <?php }
-                        } else { ?>
-                        <ul class="public-tools">
                         <?php
-                        foreach ($user_tools as $toolname) {
-                            foreach ($all_tools as $key => $item ) {
-                                if ($key == $toolname) {
-                                    echo $this->makeListItem($key, $item);
-                                }
-                            }
-                        }
-                        ?>
-                        </ul>
-                        <?php } ?>
+                        } ?>
                     </div>
                     </div>
                 </div>

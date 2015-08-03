@@ -43,6 +43,9 @@
     }
 }
 
+ul.nav {
+    display: inline;
+}
 
 /* Searchbox at the top right */
 .nav > li.searchform {
@@ -83,6 +86,10 @@
 
 /* mobile navbar */
 
+.dropdown-target {
+    display: none;
+}
+
 .toggle-mobile-navbar {
     display: none;
 }
@@ -91,8 +98,8 @@ input[type=checkbox] {
     display: none;
 }
 
-input[type=checkbox]:checked ~ .nav {
-    display: block;
+input[type=checkbox]:checked.dropdown-trigger ~ .dropdown-target {
+    display: block !important;
 }
 
 @media screen and (max-width: @screen-medium-res) {
@@ -112,6 +119,10 @@ input[type=checkbox]:checked ~ .nav {
                 content: '';
             }
         }
+    }
+
+    ul.nav {
+        display: none;
     }
 
     .toggle-mobile-navbar {
