@@ -8,11 +8,11 @@
         position: static;
         margin-bottom: 10px;
     }
- 
+
     p {
         margin: 0px;
     }
-    
+
     .landing-page-download-link {
         font-size: 28px;
         a {
@@ -25,4 +25,23 @@
 
 .youtube-embed-landing-page {
     text-align: center;
+}
+
+ul#pagehistory {
+    li {
+        padding: 2px 0px;
+        border: none;
+        border-bottom: 1px solid @dark-grey;
+        list-style: outside none none;
+
+        &:last-child.after {
+            border: none;
+        }
+    }
+
+    li.selected {
+        background-color: inherit;
+        border: none;
+        border-bottom: 1px solid @dark-grey;
+    }
 }
