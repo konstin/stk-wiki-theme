@@ -68,9 +68,9 @@ $this->html('headelement');
                             <?php
                             foreach ($tool["tools"] as $toolname) {
                                 foreach ($all_tools as $key => $item ) {
-                                if ($key == $toolname) {
-                                    echo $this->makeListItem($key, $item);
-                                }
+                                    if ($key == $toolname) {
+                                        echo $this->makeListItem($key, $item);
+                                    }
                                 }
                             }
                             ?>
@@ -78,13 +78,13 @@ $this->html('headelement');
                             </div>
                         <?php }
                         } else { ?>
-                        <ul>
+                        <ul class="public-tools">
                         <?php
                         foreach ($user_tools as $toolname) {
                             foreach ($all_tools as $key => $item ) {
-                            if ($key == $toolname) {
-                                echo $this->makeListItem($key, $item);
-                            }
+                                if ($key == $toolname) {
+                                    echo $this->makeListItem($key, $item);
+                                }
                             }
                         }
                         ?>
