@@ -6,10 +6,10 @@ The new wiki theme for SuperTuxKart. Nothing more, nothing less.
 
 The theme is based on mediawiki, so first of all you'll need to download and install MediaWiki.
 
-When mediaiwiki is ready, you need to download the skin to the `skins` folder. Now you should have a new folder called `skins/stk-wiki-theme`.
+When mediaiwiki is ready, you need to download the skin to the `skins` folder. Now you should have a new folder called `skins/stk-wiki-theme`. Rename that folder to `SuperTuxKart`.
 
-To be able to use the skin, open `LocalSettings.php` and add the following line at the bottom:
-```require_once "$IP/skins/STK-wiki-theme/SuperTuxKart.php";```
+To register the skin, open `LocalSettings.php` and add the following line at the bottom:
+```require_once "$IP/skins/SuperTuxKart/SuperTuxKart.php";```
 
 If you want to use this skin with the SuperTuxKart wiki pages, you also need to install two mediawiki extensions: [Youtube](https://www.mediawiki.org/wiki/Extension:YouTube) and [CSS](https://www.mediawiki.org/wiki/Extension:CSS).
 
