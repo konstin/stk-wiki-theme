@@ -43,6 +43,16 @@
     }
 }
 
+nav {
+    input[type=checkbox] {
+        display: none;
+    }
+
+    input[type=checkbox]:checked.dropdown-trigger ~ .dropdown-target {
+        display: block !important;
+    }
+}
+
 ul.nav {
     display: inline;
 }
@@ -92,14 +102,6 @@ ul.nav {
 
 .toggle-mobile-navbar {
     display: none;
-}
-
-input[type=checkbox] {
-    display: none;
-}
-
-input[type=checkbox]:checked.dropdown-trigger ~ .dropdown-target {
-    display: block !important;
 }
 
 @media screen and (max-width: @screen-medium-res) {
