@@ -26,11 +26,11 @@
             color: white;
             margin: 0px 10px;
             padding: 16px 0px;
-        }
 
-        > a:hover {
-            text-decoration: none;
-            color: orange;
+            &:hover {
+                text-decoration: none;
+                color: orange;
+            }
         }
 
         a:first-child:nth-last-child(2):before {
@@ -43,6 +43,10 @@
     }
 }
 
+ul.nav {
+    display: inline;
+}
+
 nav {
     input[type=checkbox] {
         display: none;
@@ -51,10 +55,6 @@ nav {
     input[type=checkbox]:checked.dropdown-trigger ~ .dropdown-target {
         display: block !important;
     }
-}
-
-ul.nav {
-    display: inline;
 }
 
 /* Searchbox at the top right */
@@ -109,7 +109,6 @@ ul.nav {
         position: absolute;
         left: 50%;
         transform: translate(-50%, @nav-bar-height);
-        display: none;
         width: 210px;
         background-color: #111;
         z-index: 1;
@@ -124,7 +123,7 @@ ul.nav {
     }
 
     ul.nav {
-        display: none;
+        display: none; // The dropdown is hidden by default
     }
 
     .toggle-mobile-navbar {
