@@ -52,7 +52,7 @@ $this->html('headelement');
             <li class="searchform">
                 <div class="toolbox-container">
                     <label for="toolbox-gear" class="toolbox-gear-label"><i class="fa fa-cog fa-lg"></i></label>
-                    <input type="checkbox" role="button" id="toolbox-gear" class="dropdown-trigger"></button>
+                    <input type="checkbox" role="button" id="toolbox-gear" class="dropdown-trigger"/>
                     <div class="toolbox dropdown-target"> <!-- the actual toolbox starts here -->
                         <p class="toolbox-title">Tools</p>
 
