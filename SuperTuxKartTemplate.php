@@ -4,7 +4,7 @@ class SuperTuxKartTemplate extends BaseTemplate {
      * This is function is used to create the entire page
      */
     public function execute() {
-$admin_tools = array( array("name" => "Actions", "tools" => array("edit", "move", "protect", "delete", "watch")),
+$admin_tools = array( array("name" => "Actions", "tools" => array("edit", "move", "protect", "delete", "watch", "upload")),
                       array("name" => "Page",    "tools" => array("history", "whatlinkshere", "permalink", "info")),
                       array("name" => "Me",      "tools" => array("specialpages", "preferences", "watchlist", "mycontris", "logout")));
 
