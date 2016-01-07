@@ -30,6 +30,7 @@ $wgAutoloadClasses['SuperTuxKartTemplate'] = __DIR__ . '/SuperTuxKartTemplate.ph
 $wgMessagesDirs['SuperTuxKart'] = __DIR__ . '/i18n';
 
 $wgResourceModules['skins.supertuxkart'] = array(
+    'position' => 'bottom',
     'styles' => array(
         'supertuxkart.less' => array( 'media' => 'screen' ),
         'css/font-awesome.min.css' => array( 'media' => 'screen' ),
