@@ -12,7 +12,7 @@ $user_tools = array("history", "whatlinkshere", "permalink", "info", "specialpag
 
 $all_tools = array_merge($this->getPersonalTools(), $this->data['content_actions'], $this->getToolbox());
 
-// For later...
+// TODO s. #3
 /**
 <?php if ($this->data['language_urls'] and count($this->data['language_urls']) > 0) { ?>
     <ul>

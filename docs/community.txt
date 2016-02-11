@@ -1,0 +1,115 @@
+{{#css:
+ul#get-involved-list {
+    max-width: 1000px;
+    margin: 0;
+    list-style: none;
+}
+
+ul#get-involved-list > li > div {
+    display: table;
+    margin: 0px auto;
+    padding: 0px 5px;
+} 
+
+ul#get-involved-list > li  {
+    float: left;
+    width: 20%;
+} 
+
+.get-involved-icon {
+    width: 100px;
+    height: 100px;
+    margin: 5px auto;
+}
+
+.get-involved-name {
+    margin: 5 auto;
+    text-align: center;
+}
+}}
+<html>
+<ul id="get-involved-list">
+    <li>
+        <a class="background-dark-grey" href="http://forum.freegamedev.net/viewforum.php?f=16">
+            <div class="get-involved-icon"></html>[[File:forum-logo.png|100px]]<html></div>
+            <div class="get-involved-name">Forum</div>
+        </a>
+    </li>
+    <li>
+        <a class="background-dark-grey" href="https://github.com/supertuxkart/stk-code">
+            <div class="get-involved-icon"></html>[[File:github-logo.png|100px]]<html></div>
+            <div class="get-involved-name">GitHub</div>
+        </a>
+    </li>
+    <li>
+        <a class="background-dark-grey" href="http://webchat.freenode.net/?channels=%23stk">
+            <div class="get-involved-icon"></html>[[File:irc-logo.png|100px]]<html></div>
+            <div class="get-involved-name">IRC</div>
+        </a>
+    </li>
+    <li>
+        <a class="background-dark-grey" href="https://lists.sourceforge.net/lists/listinfo/supertuxkart-devel">
+            <div class="get-involved-icon"></html>[[File:mailinglist-logo.png|100px]]<html></div>
+            <div class="get-involved-name">Mailing List</div>
+        </a>
+    </li>
+    <li>
+        <a class="background-dark-grey" href="http://sourceforge.net/projects/supertuxkart/">
+            <div class="get-involved-icon"></html>[[File:sourceforge-logo.png|100px]]<html></div>
+            <div class="get-involved-name">Sourceforge</div>
+        </a>
+    </li>
+</ul>
+
+</html>
+
+== Donate ==
+[http://supertuxkart.sourceforge.net/donate.php Donations help us getting things finished faster!]
+
+== Important Pages ==
+
+== [[File:Dev.png]] For programmers ==
+=== Programming ===
+* [[Source control]]
+* [[Coding Style|Coding style guidelines]]
+* [[ToDo|To Do]] 
+* [[Milestones]] 
+* [[Antarctica: Technical Details|Antarctica engine (renderer)]]
+* [[Scripting]]
+* [https://github.com/supertuxkart/stk-code/issues?q=is%3Aopen+is%3Aissue+label%3A%22T%3Afor+beginners%22 Tasks for beginners]
+
+=== Building from source ===
+* [[How to build the Windows version|Building on Windows]]
+* [[Build STK on Linux|Building on Linux]]
+* [[Building and packaging on OSX]]
+
+=== Design documents ===
+* [[Story mode]]
+* [[AI for battle mode]]
+
+=== Misc ===
+* [[Making_challenges|Create challenges]]
+* [[About releasing new versions]]
+
+== [[File:Art.png]] For everyone ==
+
+=== Guidelines ===
+* [[Style Guidelines]]
+* [[Licensing]]
+* [[Music and sound effects general specifications|Music & SFX specifications]]
+* [[File naming conventions]]
+* [[Global Universe]]
+
+=== Creating ===
+* List of [[Object list|needed objects]]
+* [[Track Maker's Guide|Track Maker's Guide]]
+* [[Kart resources index|Making Karts]]
+
+=== Misc HowTo's ===
+* Using the [[Media Repo]]
+* [[Installing the tools| Installing the tools]]
+* Running STK in [[Artist Debug Mode]]
+* [[Translating_STK | Translate STK]]
+* Connect your [[Wiimote]]
+* [[Fonts | Generate and use fonts]]
+* [[Track_Editor| Track Editor]]

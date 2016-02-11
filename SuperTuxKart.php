@@ -15,12 +15,12 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['skin'][] = array(
     'path' => __FILE__,
     'name' => 'SuperTuxKart',
-    'namemsg' => 'skinname-supertuxkart',
+    'namemsg' => 'SuperTuxKart',
     'version' => '1.0',
     'url' => 'https://github.com/konstin/STK-wiki-theme',
     'author' => array('Jean-Manuel Clemencon (Design)', 'konstin (Programming)'),
-    'descriptionmsg' => 'supertuxkart-desc',
-    'license' => '[TODO]',
+    'descriptionmsg' => 'A Skin for the Website of SuperTuxKart',
+    'license' => '',
 );
 
 $wgValidSkinNames['supertuxkart'] = 'SuperTuxKart';
@@ -48,7 +48,5 @@ $wgResourceModules['skins.supertuxkart.dropdown.js'] = array(
     'remoteSkinPath' => 'SuperTuxKart',
     'localBasePath' => __DIR__,
 );
-
-
 
 ?>
