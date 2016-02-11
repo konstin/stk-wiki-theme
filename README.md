@@ -14,8 +14,10 @@ To configure everything as needed for the SuperTuxKart wiki, add the following a
 ```
 # Enable the skin
 require_once "$IP/skins/SuperTuxKart/SuperTuxKart.php";
-$wgLogo    = "$wgStylePath/SuperTuxKart/images/logo.png";
-$wgFavicon = "$wgStylePath/SuperTuxKart/images/favicon.png";
+$wgDefaultSkin = "SuperTuxKart";
+$wgStylePath   = "$wgScriptPath/skins";
+$wgLogo        = "$wgStylePath/SuperTuxKart/images/logo.png";
+$wgFavicon     = "$wgStylePath/SuperTuxKart/images/favicon.png";
 
 # Enable the extensions (optional)
 require_once "$IP/extensions/YouTube/YouTube.php";
@@ -42,4 +44,3 @@ $wgFileExtensions[] = 'svg';
  * Avoid javascript wherever possible
  * Avoid loading resources from external server due to privacy and availability issues
  * All custom fonts are saved in the `fonts` folder in different formats and included using `@font-face`
-
