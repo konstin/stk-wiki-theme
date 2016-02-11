@@ -1,4 +1,8 @@
 {{#css:
+#toc {
+    display: none;
+}
+
 ul#get-involved-list {
     max-width: 1000px;
     margin: 0;
@@ -66,9 +70,14 @@ ul#get-involved-list > li  {
 == Donate ==
 [http://supertuxkart.sourceforge.net/donate.php Donations help us getting things finished faster!]
 
+<div style="text-align: center">
 == Important Pages ==
+</div>
 
-== [[File:Dev.png]] For programmers ==
+<div style="overflow: hidden">
+<div style="float: left; width: 50%;">
+
+== For programmers ==
 === Programming ===
 * [[Source control]]
 * [[Coding Style|Coding style guidelines]]
@@ -91,7 +100,10 @@ ul#get-involved-list > li  {
 * [[Making_challenges|Create challenges]]
 * [[About releasing new versions]]
 
-== [[File:Art.png]] For everyone ==
+</div>
+<div style="float: left; width: 50%;">
+
+== For everyone ==
 
 === Guidelines ===
 * [[Style Guidelines]]
@@ -113,3 +125,4 @@ ul#get-involved-list > li  {
 * Connect your [[Wiimote]]
 * [[Fonts | Generate and use fonts]]
 * [[Track_Editor| Track Editor]]
+</div>
