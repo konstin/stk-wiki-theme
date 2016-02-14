@@ -7,6 +7,12 @@ ul#get-involved-list {
     max-width: 1000px;
     margin: 0;
     list-style: none;
+    overflow: hidden;
+}
+
+ul#get-involved-list > li  {
+    float: left;
+    width: 20%;
 }
 
 ul#get-involved-list > li > div {
@@ -15,51 +21,56 @@ ul#get-involved-list > li > div {
     padding: 0px 5px;
 } 
 
-ul#get-involved-list > li  {
-    float: left;
-    width: 20%;
-} 
-
 .get-involved-icon {
     width: 100px;
     height: 100px;
     margin: 5px auto;
+    text-align: center;
 }
 
 .get-involved-name {
     margin: 5 auto;
     text-align: center;
 }
+
+.community-link {
+    color: black;
+}
+
+.community-link .fa {
+    font-size: 100px;
+}
+
 }}
 <html>
 <ul id="get-involved-list">
     <li>
-        <a class="background-dark-grey" href="http://forum.freegamedev.net/viewforum.php?f=16">
-            <div class="get-involved-icon"></html>[[File:forum-logo.png|100px]]<html></div>
+        <a class="community-link" href="http://forum.freegamedev.net/viewforum.php?f=16">
+            <div class="get-involved-icon"><i class="fa fa-puzzle-piece"></i></div>
             <div class="get-involved-name">Forum</div>
         </a>
     </li>
     <li>
-        <a class="background-dark-grey" href="https://github.com/supertuxkart/stk-code">
-            <div class="get-involved-icon"></html>[[File:github-logo.png|100px]]<html></div>
+        <a class="community-link" href="https://github.com/supertuxkart/stk-code">
+            <div class="get-involved-icon"><i class="fa fa-github"      ></i></div>
             <div class="get-involved-name">GitHub</div>
         </a>
     </li>
     <li>
-        <a class="background-dark-grey" href="http://webchat.freenode.net/?channels=%23stk">
-            <div class="get-involved-icon"></html>[[File:irc-logo.png|100px]]<html></div>
+        <a class="community-link" href="http://webchat.freenode.net/?channels=%23stk">
+            <div class="get-involved-icon"><i class="fa fa-puzzle-piece"></i></div>
             <div class="get-involved-name">IRC</div>
         </a>
     </li>
     <li>
-        <a class="background-dark-grey" href="https://lists.sourceforge.net/lists/listinfo/supertuxkart-devel">
-            <div class="get-involved-icon"></html>[[File:mailinglist-logo.png|100px]]<html></div>
+        <a class="community-link" href="https://lists.sourceforge.net/lists/listinfo/supertuxkart-devel">
+            <div class="get-involved-icon"><i class="fa fa-puzzle-piece"></i></div>
             <div class="get-involved-name">Mailing List</div>
         </a>
     </li>
     <li>
-        <a class="background-dark-grey" href="http://sourceforge.net/projects/supertuxkart/">
-            <div class="get-involved-icon"></html>[[File:sourceforge-logo.png|100px]]<html></div>
+        <a class="community-link" href="http://sourceforge.net/projects/supertuxkart/">
+            <div class="get-involved-icon"><i class="fa fa-puzzle-piece"></i></div>
             <div class="get-involved-name">Sourceforge</div>
         </a>
     </li>
@@ -67,17 +78,19 @@ ul#get-involved-list > li  {
 
 </html>
 
-== Donate ==
-[http://supertuxkart.sourceforge.net/donate.php Donations help us getting things finished faster!]
-
-<div style="text-align: center">
-== Important Pages ==
+<html>
+<div style="text-align: center; margin-top: 20px; marign-bottom: 10px">
+<a href="http://supertuxkart.sourceforge.net/donate.php" style="color: red;">
+<h2> <i class="fa fa-heart"></i> Support Us </h2>
+<p>Donations help us getting things finished faster!</p>
+</a>
 </div>
+</html>
 
 <div style="overflow: hidden">
 <div style="float: left; width: 50%;">
 
-== For programmers ==
+== <i style="margin: 0px 5px;" class="fa fa-file-code-o"></i> For programmers ==
 === Programming ===
 * [[Source control]]
 * [[Coding Style|Coding style guidelines]]
@@ -103,7 +116,7 @@ ul#get-involved-list > li  {
 </div>
 <div style="float: left; width: 50%;">
 
-== For everyone ==
+== <i style="margin: 0px 5px;" class="fa fa-paint-brush"></i> For Artists ==
 
 === Guidelines ===
 * [[Style Guidelines]]
