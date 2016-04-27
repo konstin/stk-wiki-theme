@@ -35,6 +35,7 @@ $wgRawHtml = true; # Not the best solution, but still better than using javascri
 # Enable file uploads and also enable svg
 $wgEnableUploads = true;
 $wgFileExtensions[] = 'svg';
+wfLoadExtension( 'ParserFunctions' );
 ```
 
 ## Coding Convetions
