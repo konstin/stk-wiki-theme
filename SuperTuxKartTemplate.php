@@ -158,7 +158,7 @@ $footer_section = array (
     array( 'heading' => 'Development', 'entries' => array (
         array('Modding', '/wiki/Track_Maker%27s_Guide'),
         array('GitHub', 'https://github.com/supertuxkart/stk-code'),
-        array('Doxygen', 'http://supertuxkart.sourceforge.net/doxygen')
+        array('Documentation', 'http://supertuxkart.sourceforge.net/doxygen')
     )),
     array( 'heading' => 'About us', 'entries' => array (
         array('FAQ', '/wiki/FAQ'),
