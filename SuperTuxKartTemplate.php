@@ -186,10 +186,10 @@ foreach ($footer_section as $column) { ?>
 </div>
 
 <div class="footer-copyright">
-Site design by Konstin & Sam<br />
+Site designed by Jean-Manuel Cl&eacute;men&ccedil;on & Konstin<br />
 Powered by <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a><br /><br />
 
-SuperTuxKart Team © 2015
+SuperTuxKart Team © 2016
 </div>
 
 </footer>
