@@ -48,7 +48,8 @@ $this->html('headelement');
             <li><a href="/wiki/Discover" >Discover </a></li>
             <li><a href="/wiki/Download" >Download </a></li>
             <li><a href="/wiki/FAQ"      >FAQ      </a></li>
-            <li><a href="/wiki/Community">Community</a></li>
+            <li><a href="/wiki/Community">Get Involved</a></li>
+            <li><a href="/wiki/Donate">Donate ❤</a></li>
             <li class="searchform">
                 <div class="toolbox-container">
                     <label for="toolbox-gear" class="toolbox-gear-label"><i class="fa fa-cog fa-lg"></i></label>
