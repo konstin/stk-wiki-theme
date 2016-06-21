@@ -50,7 +50,7 @@ $this->html('headelement');
             <li><a href="/FAQ"      >FAQ      </a></li>
             <li><a href="/Community">Get Involved</a></li>
             <li><a href="http://stkblog.net">Blog</a></li>
-            <li><a href="/Donate">Donate &hearts;</a></li>
+            <li><a class=".donate-top-menu-link" href="/Donate">Donate &hearts;</a></li>
             <li class="searchform">
                 <div class="toolbox-container">
                     <label for="toolbox-gear" class="toolbox-gear-label"><i class="fa fa-cog fa-lg"></i></label>
