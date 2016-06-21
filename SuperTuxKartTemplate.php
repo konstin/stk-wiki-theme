@@ -45,12 +45,12 @@ $this->html('headelement');
         <label for="toggle-mobile-navbar" class="toggle-mobile-navbar"><i class="fa fa-bars" style="margin-right: 5px"></i>Menu</label>
         <input type="checkbox" role="button" id="toggle-mobile-navbar" class="dropdown-trigger">
         <ul class="nav noselect dropdown-target">
-            <li><a href="/wiki/Discover" >Discover </a></li>
-            <li><a href="/wiki/Download" >Download </a></li>
-            <li><a href="/wiki/FAQ"      >FAQ      </a></li>
-            <li><a href="/wiki/Community">Get Involved</a></li>
+            <li><a href="/Discover" >Discover </a></li>
+            <li><a href="/Download" >Download </a></li>
+            <li><a href="/FAQ"      >FAQ      </a></li>
+            <li><a href="/Community">Get Involved</a></li>
             <li><a href="http://stkblog.net">Blog</a></li>
-            <li><a href="/wiki/Donate">Donate &hearts;</a></li>
+            <li><a href="/Donate">Donate &hearts;</a></li>
             <li class="searchform">
                 <div class="toolbox-container">
                     <label for="toolbox-gear" class="toolbox-gear-label"><i class="fa fa-cog fa-lg"></i></label>
@@ -154,19 +154,19 @@ $footer_section = array (
     )),
     array( 'heading' => 'Media', 'entries' => array (
         array('YouTube', 'https://www.youtube.com/channel/UCJ9hmn6MG_ggpQUhmbMS2mQ'),
-        array('Pictures', '/wiki/Pictures'),
-        array('Posters', '/wiki/Posters')
+        array('Pictures', '/Pictures'),
+        array('Posters', '/Posters')
     )),
     array( 'heading' => 'Development', 'entries' => array (
-        array('Modding', '/wiki/Track_Maker%27s_Guide'),
+        array('Modding', '/Track_Maker%27s_Guide'),
         array('GitHub', 'https://github.com/supertuxkart/stk-code'),
         array('Documentation', 'http://supertuxkart.sourceforge.net/doxygen')
     )),
     array( 'heading' => 'About us', 'entries' => array (
-        array('FAQ', '/wiki/FAQ'),
-        array('Who we are', '/wiki/Team'),
-        array('About SuperTuxKart', '/wiki/About_SuperTuxKart'),
-        array('Projects using SuperTuxKart', '/wiki/Projects'),
+        array('FAQ', '/FAQ'),
+        array('Who we are', '/Team'),
+        array('About SuperTuxKart', '/About_SuperTuxKart'),
+        array('Projects using SuperTuxKart', '/Projects'),
     ))
 );
 ?>
