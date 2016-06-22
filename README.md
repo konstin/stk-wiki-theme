@@ -7,7 +7,7 @@ The theme is based on mediawiki, so first of all you'll need to download and set
 
 Once mediawiki is ready, you need to copy this skin to the `skins` folder. Now you should have a new folder called `skins/stk-wiki-theme`. Rename that folder to `SuperTuxKart`.
 
-If you want to properly run the SuperTuxKart wiki, you also need to install two mediawiki extensions: [Youtube](https://www.mediawiki.org/wiki/Extension:YouTube) and [CSS](https://www.mediawiki.org/wiki/Extension:CSS).
+If you want to properly run the SuperTuxKart wiki, you also need to install three mediawiki extensions: [Youtube](https://www.mediawiki.org/wiki/Extension:YouTube), [CSS](https://www.mediawiki.org/wiki/Extension:CSS) and [Purge](https://www.mediawiki.org/wiki/Extension:Purge).
 
 To configure everything as needed for the SuperTuxKart wiki, add the following at the end of `LocalSettings.php`:
 
@@ -22,6 +22,7 @@ $wgFavicon     = "$wgStylePath/SuperTuxKart/images/favicon.png";
 # Enable the extensions (optional)
 require_once "$IP/extensions/YouTube/YouTube.php";
 require_once "$IP/extensions/CSS/CSS.php";
+require_once "$IP/extensions/Purge/Purge.php";
 
 # Prevent account creation
 $wgGroupPermissions['*']['createaccount'] = false;
