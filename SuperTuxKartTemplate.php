@@ -129,6 +129,44 @@ $this->html('headelement');
 <?php } ?>
 <article>
 <?php $this->html('bodytext') ?>
+<div id="section-donate-form" style="display:none;">
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	<label for="amount">Select the amount you wish to donate:</label> 
+	<input type="text" value="10" name="amount" id="amount" style="width:75px"/> $AUD
+
+	<br/>
+	<i>Note: please be aware that paypal keeps a certain fee for any donations. Since PayPal takes a portion of the payment as fees, 
+	we recommend donating at least US$2. If you have donated US$5 or more in the past, please contact us, and you will get this new 
+	package without having to make a new donation.
+	</i>
+
+	<!--
+	<label for="amount">Select the amount you wish to donate:</label> 
+	<select name="amount" id="amount">
+	<option value="5.00">$5.00</option>
+	<option value="10.00" selected="selected">$10.00</option>
+	<option value="15.00">$15.00</option>
+	<option value="20.00">$20.00</option>
+	<option value="25.00">$25.00</option>
+	<option value="30.00">$30.00</option>
+	<option value="40.00">$40.00</option>
+	<option value="50.00">$50.00</option>
+	<option value="75.00">$75.00</option>
+	<option value="100.00">$100.00</option>
+	</select>
+	-->
+	<br/><br/>
+	<input type="hidden" name="cmd" value="_donations">
+	<input type="hidden" name="business" value="B25GVW5NDLDHN">
+	<input type="hidden" name="lc" value="AU">
+	<input type="hidden" name="item_name" value="SuperTuxKart">
+	<input type="hidden" name="currency_code" value="AUD">
+	<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+	<input type="hidden" name="return" value="http://supertuxkart.sourceforge.net/donation_complete.php"/>
+	<input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
+	<img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
+	</form>
+</div>
 </article>
 </div>
 

@@ -33,4 +33,13 @@ $(function() {
         });
     // Kick off one resize to fix all videos on page load
     }).resize();
+	
+	// Display the donate section only if it's enabled (on the donate page)
+	$( document ).ready(function(){
+		console.log("plop")
+		if($('#section-donate-true').length > 0) {
+			console.log("We should display the donations");
+			$('#section-donate-form').show();
+		}
+	});
 });
