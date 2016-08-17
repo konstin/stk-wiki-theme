@@ -203,7 +203,7 @@ $footer_section = array (
     array( 'heading' => 'About us', 'entries' => array (
         array('FAQ', '/FAQ'),
         array('Who we are', '/Team'),
-        array('About SuperTuxKart', '/About_SuperTuxKart'),
+        array('About SuperTuxKart', '/Discover'),
         array('Projects using SuperTuxKart', '/Projects'),
     ))
 );
