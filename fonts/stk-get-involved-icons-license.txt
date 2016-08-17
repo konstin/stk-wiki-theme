@@ -1,0 +1,5 @@
+Icons in the stk-get-involved-icons glyph set:
+
+irc: by Matthew, CC0
+forum: by Ghoulsblade, modified by Matthew, license unknown
+sf-logo: Copyright © SourceForge/Slashdot Media, used with permission
