@@ -4,7 +4,7 @@ irc: by Matthew, CC0 Public Domain
 
 ------------------------------------------------------------------------
 
-forum: Copyright 2007 - 2012 FreeGameDevWiki. All rights reserved.
+forum: Copyright 2007 - 2012 FreeGameDevWiki. All rights reserved. Logo design by qubodup.
 
 Redistribution and use in source (Wikitext) and 'compiled' forms (HTML, other DTDs, PDF, PostScript, RTF and so forth) with or without modification, are permitted provided that the following conditions are met:
 
