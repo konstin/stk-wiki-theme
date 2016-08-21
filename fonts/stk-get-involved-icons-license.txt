@@ -1,4 +1,4 @@
-Icons in the stk-get-involved-icons glyph set:
+Icons in the stk-get-involved-icons glyph set, created with the free IcoMoon webapp:
 
 irc: by Matthew, CC0 Public Domain
 
