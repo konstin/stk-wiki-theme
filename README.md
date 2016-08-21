@@ -46,3 +46,4 @@ wfLoadExtension( 'ParserFunctions' );
  * Avoid javascript wherever possible
  * Avoid loading resources from external server due to privacy and availability issues
  * All custom fonts are saved in the `fonts` folder in different formats and included using `@font-face`
+
