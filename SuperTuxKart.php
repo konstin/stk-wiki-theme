@@ -34,6 +34,7 @@ $wgResourceModules['skins.supertuxkart'] = array(
     'styles' => array(
         'supertuxkart.less' => array( 'media' => 'screen' ),
         'css/font-awesome.min.css' => array( 'media' => 'screen' ),
+        'css/font-stk-get-involved-icons.css' => array( 'media' => 'screen' ),
     ),
 
     'remoteSkinPath' => 'SuperTuxKart',
