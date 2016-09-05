@@ -56,3 +56,13 @@ code {
 .mw-ui-container {
     overflow: hidden;
 }
+
+/* Override some default MediaWiki values and some built-in values to make tables mobile-friendly */
+table.wikitable
+{
+    display: block;
+    border-width: 0px !important;
+    display: block;
+    max-width: 100%;
+    overflow: auto;
+}
