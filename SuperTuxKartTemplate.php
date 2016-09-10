@@ -192,7 +192,7 @@ $footer_section = array (
     )),
     array( 'heading' => 'Media', 'entries' => array (
         array('YouTube', 'https://www.youtube.com/channel/UCJ9hmn6MG_ggpQUhmbMS2mQ'),
-        array('Pictures', '/Pictures'),
+        array('Pictures', '/Gallery'),
         array('Posters', '/Posters')
     )),
     array( 'heading' => 'Development', 'entries' => array (
