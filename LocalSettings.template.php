@@ -41,7 +41,7 @@ $wgUsePathInfo = true;
 $wgResourceBasePath = $wgScriptPath;
 
 # The skin
-require_once "$IP/skins/SuperTuxKart/SuperTuxKart.php";
+wfLoadSkin('SuperTuxKart');
 $wgDefaultSkin = "SuperTuxKart";
 $wgStylePath   = "$wgScriptPath/skins";
 $wgLogo        = "$wgStylePath/SuperTuxKart/images/logo.png";

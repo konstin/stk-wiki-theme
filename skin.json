@@ -1,0 +1,51 @@
+{
+    "name": "SuperTuxKart",
+    "version": "1.0",
+    "author": [
+        "Jean-Manuel Clemencon (Design)",
+        "konstin (Programming)"
+    ],
+    "url": "https://github.com/konstin/STK-wiki-theme",
+    "descriptionmsg": "A Skin for the Website of SuperTuxKart",
+    "namemsg": "SuperTuxKart",
+    "type": "skin",
+    "ValidSkinNames": {
+        "supertuxkart": "SuperTuxKart"
+    },
+    "MessagesDirs": {
+        "SuperTuxKart": [
+            "i18n"
+        ]
+    },
+    "AutoloadClasses": {
+        "SkinSuperTuxKart": "SuperTuxKart.skin.php",
+        "SuperTuxKartTemplate": "SuperTuxKartTemplate.php"
+    },
+    "license": [""],
+    "ResourceModules": {
+        "skins.supertuxkart": {
+            "position": "bottom",
+            "styles": {
+                "supertuxkart.less": {
+                    "media": "screen"
+                },
+                "css/font-awesome.min.css": {
+                    "media": "screen"
+                },
+                "css/font-stk-get-involved-icons.css": {
+                    "media": "screen"
+                }
+            }
+        },
+        "skins.supertuxkart.dropdown.js": {
+            "scripts": [
+                "js/responsive-youtube-video-size.js"
+            ]
+        }
+    },
+    "ResourceFileModulePaths": {
+        "localBasePath": "",
+        "remoteSkinPath": "SuperTuxKart"
+    },
+    "manifest_version": 1
+}
