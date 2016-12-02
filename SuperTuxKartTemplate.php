@@ -196,7 +196,7 @@ $footer_section = array (
         array('Posters', '/Posters')
     )),
     array( 'heading' => 'Development', 'entries' => array (
-        array('Modding', '/Art_Portal'),
+        array('Modding', '/Community'),
         array('GitHub', 'https://github.com/supertuxkart/stk-code'),
         array('Documentation', 'http://supertuxkart.sourceforge.net/doxygen')
     )),
