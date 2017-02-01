@@ -49,7 +49,7 @@ $this->html('headelement');
             <li><a href="/Download" >Download </a></li>
             <li><a href="/FAQ"      >FAQ      </a></li>
             <li><a href="/Community">Get Involved</a></li>
-            <li><a href="http://stkblog.net">Blog</a></li>
+            <li><a href="http://blog.supertuxkart.net/">Blog</a></li>
             <li><a class="donate-top-menu-link" href="/Donate">Donate <i class="fa fa-heart"></i></a></li>
             <li class="searchform">
                 <div class="toolbox-container">
@@ -185,7 +185,7 @@ $this->html('headelement');
 $footer_section = array (
     array( 'heading' => 'Community', 'entries' => array (
         array('Forum', 'http://forum.freegamedev.net/viewforum.php?f=16'),
-        array('Blog', 'http://supertuxkart.blogspot.com/'),
+        array('Blog', 'http:/blog.supertuxkart.net/'),
         array('Twitter', 'https://twitter.com/supertuxkart'),
         array('Addons', 'http://addons.supertuxkart.net/'),
         array('irc: #stk@freenode', 'http://webchat.freenode.net?channels=%23stk&uio=d4')
