@@ -188,7 +188,7 @@ $footer_section = array (
         array('Blog', 'http:/blog.supertuxkart.net/'),
         array('Twitter', 'https://twitter.com/supertuxkart'),
         array('Addons', 'http://addons.supertuxkart.net/'),
-        array('irc: #stk@freenode', 'http://webchat.freenode.net?channels=%23stk&uio=d4')
+        array('irc: #supertuxkart@freenode', 'http://webchat.freenode.net?channels=%23supertuxkart&uio=d4')
     )),
     array( 'heading' => 'Media', 'entries' => array (
         array('YouTube', 'https://www.youtube.com/channel/UCJ9hmn6MG_ggpQUhmbMS2mQ'),
