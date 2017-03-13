@@ -5,7 +5,12 @@
   src:
     url('../fonts/stk-get-involved-icons.ttf?fg5xmd') format('truetype'),
     url('../fonts/stk-get-involved-icons.woff?fg5xmd') format('woff'),
-    url('../fonts/stk-get-involved-icons.svg?fg5xmd#stk-get-involved-icons') format('svg');
+    url('../fonts/stk-get-involved-icons.svg?fg5xmd#stk-get-involved-icons') format('svg'),
+    
+    /* Ugly hack for IE since it doesn't seem to like relative URLs. */
+    url('https://supertuxkart.net/skins/SuperTuxKart/fonts/stk-get-involved-icons.ttf?fg5xmd') format('truetype'),
+    url('https://supertuxkart.net/skins/SuperTuxKart/fonts/stk-get-involved-icons.woff?fg5xmd') format('woff'),
+    url('https://supertuxkart.net/skins/SuperTuxKart/fonts/stk-get-involved-icons.svg?fg5xmd#stk-get-involved-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
