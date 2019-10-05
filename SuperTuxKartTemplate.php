@@ -184,11 +184,11 @@ $this->html('headelement');
 // Data to be displayed at the end
 $footer_section = array (
     array( 'heading' => 'Community', 'entries' => array (
-        array('Forum', 'http://forum.freegamedev.net/viewforum.php?f=16'),
-        array('Blog', 'http:/blog.supertuxkart.net/'),
+        array('Forum', 'https://forum.freegamedev.net/viewforum.php?f=16'),
+        array('Blog', 'http://blog.supertuxkart.net/'),
         array('Twitter', 'https://twitter.com/supertuxkart'),
-        array('Addons', 'http://addons.supertuxkart.net/'),
-        array('irc: #supertuxkart@freenode', 'http://webchat.freenode.net?channels=%23supertuxkart&uio=d4')
+        array('Addons', 'https://online.supertuxkart.net/'),
+        array('irc: #supertuxkart@freenode', 'https://webchat.freenode.net/#%23supertuxkart')
     )),
     array( 'heading' => 'Media', 'entries' => array (
         array('YouTube', 'https://www.youtube.com/channel/UCJ9hmn6MG_ggpQUhmbMS2mQ'),
@@ -229,7 +229,7 @@ foreach ($footer_section as $column) { ?>
 Site designed by Jean-Manuel Cl&eacute;men&ccedil;on & Konstin<br />
 Powered by <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a><br /><br />
 
-SuperTuxKart Team © 2016
+SuperTuxKart Team © 2019
 </div>
 
 </footer>
